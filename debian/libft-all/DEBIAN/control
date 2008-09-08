@@ -1,0 +1,18 @@
+Package: libft-all
+Source: libft
+Version: 0.4.3-1
+Architecture: i386
+Maintainer: Erik Andresen <erik@defiant.homedns.org>
+Installed-Size: 32
+Depends: libft0 (= 0.4.3-1), libft-python (= 0.4.3-1), libft-diag (= 0.4.3-1), libft-dev (= 0.4.3-1), python-qt4
+Section: libdevel
+Priority: extra
+Description: library for the fischertechnik ROBO Interface - Python module
+ libft is an implementation of the fischertechnik ROBO interface library for
+ Unix-like systems. The goal is to create a library that is fully compatible
+ with the ftlib by knobloch electronic. This library should work on any
+ systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
+ module is available.
+ .
+ This package will install everything
+Python-Version: all

@@ -1,0 +1,1 @@
+/usr/bin/gcc  -fPIC -g -O2   -shared -Wl,-soname,libft.so.0 -o libft.so.0.4.3 CMakeFiles/ft.dir/libft.o CMakeFiles/ft.dir/crc.o -lpthread -lusb 

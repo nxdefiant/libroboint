@@ -1,0 +1,17 @@
+Package: libft-dev
+Source: libft
+Version: 0.4.3-1
+Architecture: i386
+Maintainer: Erik Andresen <erik@defiant.homedns.org>
+Installed-Size: 100
+Depends: libft0 (= 0.4.3-1), cmake, libusb-dev
+Section: libdevel
+Priority: extra
+Description: library for the fischertechnik ROBO Interface - Headers
+ libft is an implementation of the fischertechnik ROBO interface library for
+ Unix-like systems. The goal is to create a library that is fully compatible
+ with the ftlib by knobloch electronic. This library should work on any
+ systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
+ module is available.
+ .
+ This package contains the necessary files needed to build own programs.

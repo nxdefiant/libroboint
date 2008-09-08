@@ -1,0 +1,29 @@
+The system is: Linux - 2.6.19.2 - unknown
+Determining if the C compiler is GNU succeeded with the following output:
+# 1 "/usr/share/cmake-2.4/Modules/CMakeTestGNU.c"
+# 1 "<built-in>"
+# 1 "<command line>"
+# 1 "/usr/share/cmake-2.4/Modules/CMakeTestGNU.c"
+
+void THIS_IS_GNU();
+
+Determining if the C++ compiler is GNU succeeded with the following output:
+# 1 "/usr/share/cmake-2.4/Modules/CMakeTestGNU.c"
+# 1 "<built-in>"
+# 1 "<command line>"
+# 1 "/usr/share/cmake-2.4/Modules/CMakeTestGNU.c"
+
+void THIS_IS_GNU();
+
+Determining if the C compiler works passed with the following output:
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Entering directory `/home/erik/ft/iinterface/RoboPro/libft/lib/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/erik/ft/iinterface/RoboPro/libft/lib/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/testCCompiler.o
+/usr/bin/gcc   -o CMakeFiles/cmTryCompileExec.dir/testCCompiler.o   -c /home/erik/ft/iinterface/RoboPro/libft/lib/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec
+/usr/bin/cmake -P CMakeFiles/cmTryCompileExec.dir/cmake_clean_target.cmake
+/usr/bin/gcc        -fPIC "CMakeFiles/cmTryCompileExec.dir/testCCompiler.o"   -o cmTryCompileExec -rdynamic 
+make[1]: Leaving directory `/home/erik/ft/iinterface/RoboPro/libft/lib/CMakeFiles/CMakeTmp'
+
+

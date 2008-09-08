@@ -1,0 +1,19 @@
+Package: libft0
+Source: libft
+Version: 0.4.3-1
+Architecture: i386
+Maintainer: Erik Andresen <erik@defiant.homedns.org>
+Installed-Size: 116
+Depends: libc6 (>= 2.7-1), libusb-0.1-4 (>= 2:0.1.12)
+Suggests: libft-doc
+Replaces: libft
+Section: libs
+Priority: extra
+Description: library for the fischertechnik ROBO Interface
+ libft is an implementation of the fischertechnik ROBO interface library for
+ Unix-like systems. The goal is to create a library that is fully compatible
+ with the ftlib by knobloch electronic. This library should work on any
+ systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
+ module is available.
+ .
+ This package contains the necessary files needed to run programs.

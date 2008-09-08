@@ -1,0 +1,8 @@
+[python-package]
+format = 1
+python-version = 2.5
+[pycentral]
+version = 0.6.7
+[files]
+/usr/lib/python2.5/site-packages/robointerface.py=f
+/usr/lib/python2.5/site-packages/robointerface-0.4.3.egg-info=f

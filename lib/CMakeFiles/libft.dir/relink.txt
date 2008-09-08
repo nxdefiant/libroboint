@@ -1,0 +1,1 @@
+/usr/bin/gcc  -fPIC    -shared -Wl,-soname,liblibft.so -o CMakeFiles/CMakeRelink.dir/liblibft.so "CMakeFiles/libft.dir/libft.o" -lpthread -lusb 

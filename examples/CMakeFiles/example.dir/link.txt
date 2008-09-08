@@ -1,0 +1,1 @@
+/usr/bin/gcc  -g -O2    CMakeFiles/example.dir/example.o  -o example -rdynamic ../lib/libft.so.0.4.3 -lpthread -lusb -Wl,-rpath,/home/erik/Proggen/c/libft/libft/lib 

@@ -1,0 +1,93 @@
+Source: libft
+Priority: extra
+Maintainer: Erik Andresen <erik@defiant.homedns.org>
+Build-Depends: debhelper (>= 5), python (>= 2.0), python-central
+Standards-Version: 3.7.2
+Section: libs
+
+Package: libft-dev
+Section: libdevel
+Architecture: any
+Depends: libft0 (= ${binary:Version}), cmake, libusb-dev
+Description: library for the fischertechnik ROBO Interface - Headers
+ libft is an implementation of the fischertechnik ROBO interface library for
+ Unix-like systems. The goal is to create a library that is fully compatible
+ with the ftlib by knobloch electronic. This library should work on any
+ systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
+ module is available.
+ .
+ This package contains the necessary files needed to build own programs.
+
+Package: libft0
+Section: libs
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: libft-doc
+Replaces: libft
+Description: library for the fischertechnik ROBO Interface
+ libft is an implementation of the fischertechnik ROBO interface library for
+ Unix-like systems. The goal is to create a library that is fully compatible
+ with the ftlib by knobloch electronic. This library should work on any
+ systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
+ module is available.
+ .
+ This package contains the necessary files needed to run programs.
+
+Package: libft-python
+Section: libdevel
+Architecture: any
+Depends: libft0 (= ${binary:Version}), python-ctypes
+XS-Python-Version: >= 2.0
+XB-Python-Version: ${python:Versions}
+Description: library for the fischertechnik ROBO Interface - Python module
+ libft is an implementation of the fischertechnik ROBO interface library for
+ Unix-like systems. The goal is to create a library that is fully compatible
+ with the ftlib by knobloch electronic. This library should work on any
+ systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
+ module is available.
+ .
+ This package contains the python layer.
+
+Package: libft-doc
+Section: doc
+Architecture: any
+Depends: libft0 (= ${binary:Version})
+Description: library for the fischertechnik ROBO Interface - Documentation
+ libft is an implementation of the fischertechnik ROBO interface library for
+ Unix-like systems. The goal is to create a library that is fully compatible
+ with the ftlib by knobloch electronic. This library should work on any
+ systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
+ module is available.
+ .
+ This package contains the C documentation.
+
+Package: libft-diag
+Section: libdevel
+Architecture: any
+Depends: libft0 (= ${binary:Version}), libft-python (= ${binary:Version}), python-qt4
+XS-Python-Version: >= 2.0
+XB-Python-Version: ${python:Versions}
+Description: library for the fischertechnik ROBO Interface - Python module
+ libft is an implementation of the fischertechnik ROBO interface library for
+ Unix-like systems. The goal is to create a library that is fully compatible
+ with the ftlib by knobloch electronic. This library should work on any
+ systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
+ module is available.
+ .
+ This package contains the C diagnose utility.
+
+Package: libft-all
+Section: libdevel
+Architecture: any
+Depends: libft0 (= ${binary:Version}), libft-python (= ${binary:Version}), libft-diag (= ${binary:Version}), libft-dev (=${binary:Version}), python-qt4
+XS-Python-Version: >= 2.0
+XB-Python-Version: ${python:Versions}
+Description: library for the fischertechnik ROBO Interface - Python module
+ libft is an implementation of the fischertechnik ROBO interface library for
+ Unix-like systems. The goal is to create a library that is fully compatible
+ with the ftlib by knobloch electronic. This library should work on any
+ systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
+ module is available.
+ .
+ This package will install everything
+

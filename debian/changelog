@@ -1,0 +1,45 @@
+libft (0.4.3-1) unstable; urgency=low
+
+  * New Version 0.4.3
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Sun, 24 Aug 2008 16:34:21 +0200
+
+libft (0.4.2-1) unstable; urgency=low
+
+  * New Version 0.4.2
+  * added libft-all
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Fri, 22 Aug 2008 22:30:24 +0200
+
+libft (0.4.1-1) unstable; urgency=low
+
+  * New Version 0.4.1
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Mon, 23 Jun 2008 18:41:57 +0200
+
+libft (0.4-1) unstable; urgency=low
+
+  * New Version 0.4
+  * Fixed some lintian warnings
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Wed, 28 May 2008 20:01:56 +0200
+
+libft (0.3-1) unstable; urgency=low
+
+  * New Version 0.3
+  * Added packet libft-doc
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Sat, 19 Jan 2008 11:01:23 +0100
+
+libft (0.2-2) unstable; urgency=low
+
+  * urgent Analog/Voltage calculation fix
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Mon, 10 Dec 2007 21:26:00 +0100
+
+libft (0.2-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Mon, 01 Oct 2007 10:34:22 +0200
+

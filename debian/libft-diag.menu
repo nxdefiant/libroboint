@@ -1,0 +1,5 @@
+?package(libft-diag):\
+       needs="X11"\
+       section="Applications/Programming"\
+       title="ft Diagnose"\
+       command="ftdiagnose"

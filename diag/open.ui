@@ -1,0 +1,153 @@
+<ui version="4.0" >
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize" >
+   <size>
+    <width>600</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize" >
+   <size>
+    <width>600</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>Dialog</string>
+  </property>
+  <widget class="QRadioButton" name="radioButton_Serial" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Serial Robo Interface</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_USB" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>121</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>USB Device</string>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox" >
+   <property name="geometry" >
+    <rect>
+     <x>150</x>
+     <y>20</y>
+     <width>421</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox" >
+   <property name="geometry" >
+    <rect>
+     <x>210</x>
+     <y>220</y>
+     <width>177</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="standardButtons" >
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit" >
+   <property name="geometry" >
+    <rect>
+     <x>400</x>
+     <y>140</y>
+     <width>171</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>/dev/ttyS0</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_Serial_II" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>241</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Serial Intelligent Interface</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_Serial_II_Slave" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>331</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Serial Intelligent Interface with Slave</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label" >
+   <property name="geometry" >
+    <rect>
+     <x>400</x>
+     <y>120</y>
+     <width>111</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Serial Device:</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox" >
+   <property name="geometry" >
+    <rect>
+     <x>340</x>
+     <y>60</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>D1/D2 in distance mode</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
