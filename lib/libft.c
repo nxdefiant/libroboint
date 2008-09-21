@@ -74,7 +74,7 @@
  * To install the diagnose utility type
  * - make diag
  * 
- * Debian packages are available. Please read http://vontaene.de/apt/README.txt.\n
+ * Debian packages are available. Please read http://vontaene.de/apt/README.txt\n
  * You can install them with apt-get install libft0 libft-doc libft-python libft-diag
  *
  * \subsection step3 Step 3: udev
