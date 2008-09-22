@@ -947,12 +947,16 @@ static void *FtThread(FT_HANDLE hFt)
 		area->E_Sub1 = in[1];
 		area->E_Sub2 = in[2];
 		area->E_Sub3 = in[3];
-		area->AX = in[4];
-		area->AY = in[5];
+		if (hFt->type != FT_INTELLIGENT_IF && hFt->type != FT_INTELLIGENT_IF_SLAVE) {
+			area->AX = in[4];
+			area->AY = in[5];
+		}
 		area->A1 = in[6];
 		area->A2 = in[7];
-		area->AX |= (in[8] & 0x3) << 8;
-		area->AY |= (in[8] & 0xC) << 6;
+		if (hFt->type != FT_INTELLIGENT_IF && hFt->type != FT_INTELLIGENT_IF_SLAVE) {
+			area->AX |= (in[8] & 0x3) << 8;
+			area->AY |= (in[8] & 0xC) << 6;
+		}
 		area->A1 |= (in[8] & 0x30) << 4;
 		area->A2 |= (in[8] & 0xC0) << 2;
 		area->AZ = in[9];
@@ -980,13 +984,7 @@ static void *FtThread(FT_HANDLE hFt)
 		area->AVS2 |= (in[25] & 0xC) << 6;
 		area->AVS3 |= (in[25] & 0x30) << 4;
 		// 26...42
-		if (hFt->type == FT_INTELLIGENT_IF) {
-			if (i % hFt->analogcycle) { // EX
-				area->AX = in[1] & (8<<in[2]);
-			} else if (i % (2*hFt->analogcycle)) { // EY
-				area->AY = in[1] & (8<<in[2]);
-			}
-		} else if (hFt->type == FT_INTELLIGENT_IF_SLAVE) {
+		if (hFt->type == FT_INTELLIGENT_IF || hFt->type == FT_INTELLIGENT_IF_SLAVE) {
 			if (i % hFt->analogcycle) { // EX
 				area->AX = in[1] & (8<<in[2]);
 			} else if (i % (2*hFt->analogcycle)) { // EY
