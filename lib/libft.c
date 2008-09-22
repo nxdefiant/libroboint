@@ -866,7 +866,7 @@ static void *FtThread(FT_HANDLE hFt)
 		// For the II we need to simulate different speeds here
 		if (hFt->type == FT_INTELLIGENT_IF || hFt->type == FT_INTELLIGENT_IF_SLAVE) {
 			int iCurMotor;
-			for (iCurMotor = 0; iCurMotor < 7; iCurMotor++) {
+			for (iCurMotor = 0; iCurMotor < 8; iCurMotor++) {
 				if (area->MPWM_Main[iCurMotor] < ii_speed) out[1] &= ~(1 << iCurMotor);
 				if (area->MPWM_Sub1[iCurMotor] < ii_speed) out[5] &= ~(1 << iCurMotor);
 			}
