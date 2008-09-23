@@ -523,7 +523,7 @@ FT_HANDLE GetFtUsbDeviceHandleSerialNr(long int dwSN, long int dwTyp)
 	
 		if ((dwTyp == FT_AUTO_TYPE || ret->type == dwTyp) && GetFtSerialNr(ret) == dwSN) {
 			CloseFtDevice(ret);
-			return ret;
+			return GetFtUsbDeviceHandle(i); // CloseFtDevice() frees memory, so we have to reallocate it
 		}
 		
 		CloseFtDevice(ret);
@@ -700,6 +700,8 @@ long int OpenFtUsbDevice(FT_HANDLE hFt)
  * \brief Close the ft Device
  *
  * This function will close the ft Device and free its memory.
+ * Warning: CloseFtDevice() will also free() the allocated memory for this device!
+ * Meaning, that you should not call OpenFtUsbDevice() after CloseFtDevice().
  *
  * @param hFt Handle of the Device to close.
  * @return A number < 0 on error.

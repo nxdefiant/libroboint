@@ -103,6 +103,7 @@ LGPL, see license.txt
 
 Changes:
 <---------->
+0.4.4(working): -Some Bug fixes
 0.4.3:  -Bug fix: Extension digital inputs at RoboRF
 	-ftdiagnose: Display connection status
 	-Added functions: (not in Knobloch lib):
