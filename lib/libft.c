@@ -797,6 +797,7 @@ static void *FtThread(FT_HANDLE hFt)
 	area->TransferAktiv = 1;
 
 	switch(hFt->type) {
+		case FT_ROBO_IF_USB: // old firmware can not handle the new command, so stick with the old for now
 		case FT_ROBO_IF_COM:
 			out[0] = 0xf2;
 			num_write = 17;

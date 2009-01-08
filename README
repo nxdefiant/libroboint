@@ -165,6 +165,8 @@ Changes:
 
 TODO:
 <---------->
+-debian: example.c => /usr/share/doc/libft-dev/examples/
+-Altes Protokoll für alte Firmware bei USB? (Mail von Anthony)
 -read/write mem? robointerpreter.c, line 1110
 -program dl over serial (check robodummy, line 1340)
 -start/stop program over RF - where to sniff from?

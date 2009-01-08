@@ -266,7 +266,9 @@ class RoboInterface:
 				self.lib.StartFtTransferArea(self.fthandle_p, None)
 				transfer_area_p = self.lib.GetFtTransferAreaAddress(self.fthandle_p)
 				if transfer_area_p:
+					print "kuh", transfer_area_p
 					self.transfer_area = cast(transfer_area_p, POINTER(_FT_TRANSFER_AREA)).contents
+					print "muh"
 				else:
 					print >> sys.stderr, "Error: I was unable to open the Interface"
 
