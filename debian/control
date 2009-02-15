@@ -7,7 +7,7 @@ Section: libs
 
 Package: libft-dev
 Section: libdevel
-Architecture: any
+Architecture: all
 Depends: libft0 (= ${binary:Version}), cmake, libusb-dev
 Description: library for the fischertechnik ROBO Interface - Headers
  libft is an implementation of the fischertechnik ROBO interface library for
@@ -20,7 +20,7 @@ Description: library for the fischertechnik ROBO Interface - Headers
 
 Package: libft0
 Section: libs
-Architecture: i386
+Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: libft-doc
 Replaces: libft
@@ -35,7 +35,7 @@ Description: library for the fischertechnik ROBO Interface
 
 Package: libft-python
 Section: libdevel
-Architecture: any
+Architecture: all
 Depends: libft0 (= ${binary:Version}), python-ctypes
 XS-Python-Version: >= 2.0
 XB-Python-Version: ${python:Versions}
@@ -50,7 +50,7 @@ Description: library for the fischertechnik ROBO Interface - Python module
 
 Package: libft-doc
 Section: doc
-Architecture: any
+Architecture: all
 Depends: libft0 (= ${binary:Version})
 Description: library for the fischertechnik ROBO Interface - Documentation
  libft is an implementation of the fischertechnik ROBO interface library for
@@ -63,7 +63,7 @@ Description: library for the fischertechnik ROBO Interface - Documentation
 
 Package: libft-diag
 Section: libdevel
-Architecture: any
+Architecture: all
 Depends: libft0 (= ${binary:Version}), libft-python (= ${binary:Version}), python-qt4
 XS-Python-Version: >= 2.0
 XB-Python-Version: ${python:Versions}

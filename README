@@ -165,11 +165,12 @@ Changes:
 
 TODO:
 <---------->
+-find out what the value from GetAV() does mean
 -debian: example.c => /usr/share/doc/libft-dev/examples/
--Altes Protokoll für alte Firmware bei USB? (Mail von Anthony)
 -read/write mem? robointerpreter.c, line 1110
 -program dl over serial (check robodummy, line 1340)
 -start/stop program over RF - where to sniff from?
 -java layer
 -Firmware upload support, also see robodummy, robointerpreter.c, line 1190
+-file in /usr/share/applications?
 
