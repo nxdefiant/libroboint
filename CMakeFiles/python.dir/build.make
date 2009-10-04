@@ -42,7 +42,7 @@ CMAKE_BINARY_DIR = /home/erik/Proggen/c/libft/libft
 
 # Utility rule file for python.
 
-CMakeFiles/python: CMakeFiles/python.dir/build.make
+CMakeFiles/python:
 	cd /home/erik/Proggen/c/libft/libft/python && /usr/bin/python setup_cmake.py install --root /home/erik/Proggen/c/libft/libft/debian/libft-python 0.4.3
 
 python: CMakeFiles/python

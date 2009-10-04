@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-"CMakeFiles/uninstall"
+  "CMakeFiles/uninstall"
 )
 
 # Per-language clean rules from dependency scanning.

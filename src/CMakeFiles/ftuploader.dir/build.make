@@ -81,7 +81,7 @@ ftuploader_OBJECTS = \
 ftuploader_EXTERNAL_OBJECTS =
 
 src/ftuploader: src/CMakeFiles/ftuploader.dir/ftuploader.o
-src/ftuploader: lib/libft.so
+src/ftuploader: lib/libft.so.0.4.3
 src/ftuploader: /usr/lib/libusb.so
 src/ftuploader: src/CMakeFiles/ftuploader.dir/build.make
 src/ftuploader: src/CMakeFiles/ftuploader.dir/link.txt

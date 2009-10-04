@@ -81,7 +81,7 @@ example_OBJECTS = \
 example_EXTERNAL_OBJECTS =
 
 examples/example: examples/CMakeFiles/example.dir/example.o
-examples/example: lib/libft.so
+examples/example: lib/libft.so.0.4.3
 examples/example: /usr/lib/libusb.so
 examples/example: examples/CMakeFiles/example.dir/build.make
 examples/example: examples/CMakeFiles/example.dir/link.txt

@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-"CMakeFiles/python"
+  "CMakeFiles/python"
 )
 
 # Per-language clean rules from dependency scanning.

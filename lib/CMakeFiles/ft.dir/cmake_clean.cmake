@@ -1,11 +1,11 @@
 FILE(REMOVE_RECURSE
-"CMakeFiles/ft.dir/libft.o"
-"CMakeFiles/ft.dir/crc.o"
-"libft.pdb"
-"libft.a"
-"libft.so.0.4.3"
-"libft.so.0"
-"libft.so"
+  "CMakeFiles/ft.dir/libft.o"
+  "CMakeFiles/ft.dir/crc.o"
+  "libft.pdb"
+  "libft.a"
+  "libft.so.0.4.3"
+  "libft.so.0"
+  "libft.so"
 )
 
 # Per-language clean rules from dependency scanning.

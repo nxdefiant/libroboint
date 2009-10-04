@@ -42,7 +42,7 @@ CMAKE_BINARY_DIR = /home/erik/Proggen/c/libft/libft
 
 # Utility rule file for doc.
 
-CMakeFiles/doc: CMakeFiles/doc.dir/build.make
+CMakeFiles/doc:
 	doxygen
 
 doc: CMakeFiles/doc

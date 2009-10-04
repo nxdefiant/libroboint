@@ -27,8 +27,10 @@
 #   CPACK_NSIS_EXTRA_INSTALL_COMMANDS   - Extra commands used during install
 
 
+SET(CPACK_BINARY_BUNDLE "")
 SET(CPACK_BINARY_CYGWIN "")
 SET(CPACK_BINARY_DEB "")
+SET(CPACK_BINARY_DRAGNDROP "")
 SET(CPACK_BINARY_NSIS "")
 SET(CPACK_BINARY_OSXX11 "")
 SET(CPACK_BINARY_PACKAGEMAKER "")
@@ -39,6 +41,9 @@ SET(CPACK_BINARY_TGZ "")
 SET(CPACK_BINARY_TZ "")
 SET(CPACK_BINARY_ZIP "")
 SET(CPACK_CMAKE_GENERATOR "Unix Makefiles")
+SET(CPACK_COMPONENTS_ALL "")
+SET(CPACK_COMPONENT_UNSPECIFIED_HIDDEN "TRUE")
+SET(CPACK_COMPONENT_UNSPECIFIED_REQUIRED "TRUE")
 SET(CPACK_GENERATOR "TGZ")
 SET(CPACK_IGNORE_FILES "CMakeCache.txt;CMakeCache.txt;cmake_install.cmake;CPackConfig.cmake;CPackSourceConfig.cmake;install_manifest.txt;.*.tar.gz;Makefile*;CMakeFiles;.*.dir;.*.swp;configure.ac;.deps;.pyc;tags;configure-stamp;build-stamp;_CPack_Packages;debian/libft0;debian/libft-all;debian/libft-dev;debian/libft-diag;debian/libft-doc;debian/libft-python;")
 SET(CPACK_INSTALLED_DIRECTORIES "/home/erik/Proggen/c/libft/libft;/")

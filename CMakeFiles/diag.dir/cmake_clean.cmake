@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-"CMakeFiles/diag"
+  "CMakeFiles/diag"
 )
 
 # Per-language clean rules from dependency scanning.

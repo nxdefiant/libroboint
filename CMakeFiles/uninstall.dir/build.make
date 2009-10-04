@@ -42,7 +42,7 @@ CMAKE_BINARY_DIR = /home/erik/Proggen/c/libft/libft
 
 # Utility rule file for uninstall.
 
-CMakeFiles/uninstall: CMakeFiles/uninstall.dir/build.make
+CMakeFiles/uninstall:
 	/usr/bin/cmake -P /home/erik/Proggen/c/libft/libft/cmake_uninstall.cmake
 
 uninstall: CMakeFiles/uninstall

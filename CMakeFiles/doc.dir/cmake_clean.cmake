@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-"CMakeFiles/doc"
+  "CMakeFiles/doc"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
-"CMakeFiles/ftuploader.dir/ftuploader.o"
-"ftuploader.pdb"
-"ftuploader"
+  "CMakeFiles/ftuploader.dir/ftuploader.o"
+  "ftuploader.pdb"
+  "ftuploader"
 )
 
 # Per-language clean rules from dependency scanning.

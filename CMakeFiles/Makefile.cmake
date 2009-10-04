@@ -22,6 +22,8 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-2.6/Modules/CPack.cmake"
   "/usr/share/cmake-2.6/Modules/CheckIncludeFiles.cmake"
   "/usr/share/cmake-2.6/Modules/CheckLibraryExists.cmake"
+  "/usr/share/cmake-2.6/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/share/cmake-2.6/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-2.6/Modules/FindThreads.cmake"
   "/usr/share/cmake-2.6/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-2.6/Modules/Platform/UnixPaths.cmake"
@@ -37,6 +39,10 @@ SET(CMAKE_MAKEFILE_OUTPUTS
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  )
+
+# Byproducts of CMake generate step:
+SET(CMAKE_MAKEFILE_PRODUCTS
   )
 
 # Dependency information for all targets:

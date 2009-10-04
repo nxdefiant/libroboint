@@ -44,7 +44,6 @@ CMAKE_BINARY_DIR = /home/erik/Proggen/c/libft/libft
 
 CMakeFiles/install_all: install
 CMakeFiles/install_all: diag
-CMakeFiles/install_all: CMakeFiles/install_all.dir/build.make
 
 install_all: CMakeFiles/install_all
 install_all: CMakeFiles/install_all.dir/build.make

@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-"CMakeFiles/install_all"
+  "CMakeFiles/install_all"
 )
 
 # Per-language clean rules from dependency scanning.

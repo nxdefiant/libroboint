@@ -43,7 +43,6 @@ CMAKE_BINARY_DIR = /home/erik/Proggen/c/libft/libft
 # Utility rule file for diag.
 
 CMakeFiles/diag: python
-CMakeFiles/diag: CMakeFiles/diag.dir/build.make
 	cd /home/erik/Proggen/c/libft/libft/diag && /usr/bin/python setup_cmake.py install --root /home/erik/Proggen/c/libft/libft/debian/libft-diag 0.4.3
 	cd /home/erik/Proggen/c/libft/libft/diag && /usr/bin/install -m644 ftdiagnose /home/erik/Proggen/c/libft/libft/debian/libft-diag//usr/bin/
 

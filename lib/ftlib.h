@@ -19,6 +19,10 @@
 #ifndef _FT_LIBRARY_H_
 #define _FT_LIBRARY_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /** \cond doxygen ignore start */
 #define DWORD long int
 #define BYTE unsigned char
@@ -1234,6 +1238,10 @@ char IsFtInterfaceConnected(FT_HANDLE hFt);
     #define FTLIB_ERR_INTERFACE_FF                         0xE0001FFFL  
 
 /** \endcond doxygen ignore end */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 
