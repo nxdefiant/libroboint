@@ -461,6 +461,10 @@ FT_HANDLE GetFtUsbDeviceHandle(unsigned char Num)
 	for (bus = busses; bus; bus = bus->next) {
 		for (dev = bus->devices; dev; dev = dev->next) {
 			if (dev->descriptor.idVendor == FT_VENDOR_ID) {
+				//if (dev->descriptor.idProduct == 0x2) {
+				//	// test: fake Product ID
+				//	dev->descriptor.idProduct = 0x6;
+				//}
 				if (dev->descriptor.idProduct == RF_DATA_LINK_PRODUCT_ID) {
 					count_ri_at_rf = GetNumFtDevicesFromRF(dev);
 					i+=count_ri_at_rf;
@@ -729,6 +733,7 @@ long int CloseFtDevice(FT_HANDLE hFt)
 		case FT_ROBO_IF_OVER_RF:
 		case FT_ROBO_IF_USB:
 		case FT_ROBO_IO_EXTENSION:
+		default:
 			ret = usb_release_interface(hFt->device, 0);
 			if (ret < 0) {
 				fprintf(stderr, "CloseFtDevice(): Error in usb_release_interface()\n");
@@ -804,6 +809,7 @@ static void *FtThread(FT_HANDLE hFt)
 			num_read = 21;
 			break;
 		case FT_ROBO_IO_EXTENSION:
+		default:
 			out[0] = 0xf2;
 			num_write = 6;
 			num_read = 6;
@@ -910,6 +916,7 @@ static void *FtThread(FT_HANDLE hFt)
 			case FT_ROBO_IO_EXTENSION:
 			case FT_ROBO_IF_OVER_RF:
 			case FT_ROBO_RF_DATA_LINK:
+			default:
 				ret = usb_interrupt_write(hFt->device, usb_endpoint_write, out, num_write, FT_USB_TIMEOUT);
 				break;
 			case FT_ROBO_IF_COM:
@@ -930,6 +937,7 @@ static void *FtThread(FT_HANDLE hFt)
 			case FT_ROBO_IO_EXTENSION:
 			case FT_ROBO_IF_OVER_RF:
 			case FT_ROBO_RF_DATA_LINK:
+			default:
 				ret = usb_interrupt_read(hFt->device, usb_endpoint_read, in, num_read, FT_USB_TIMEOUT);
 				break;
 			case FT_ROBO_IF_COM:
