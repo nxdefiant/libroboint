@@ -101,7 +101,7 @@
  *
  * \section diag_sec Interface Diagnose 
  * You can find it in the folder diag/.\n
- * It requires the python module (see above) and PyQT4. You can launch it by running "sh ftdiagnose"
+ * It requires the python module (see above) and PyQT4. You can launch it by running "python ftdiagnose"
  * \image html diag1.png
  *
  * \section author_sec Author
