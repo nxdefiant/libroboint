@@ -60,7 +60,8 @@ install: build
 
 	cp -ar $(CURDIR)/debian/tmp/usr/bin/* $(CURDIR)/debian/libft0/usr/bin/
 	cp -ar $(CURDIR)/debian/tmp/usr/lib/* $(CURDIR)/debian/libft0/usr/lib/
-	cp -a $(CURDIR)/udev/fischertechnik.rules $(CURDIR)/debian/libft0/etc/udev/fischertechnik.rules
+
+	dh_installudev --priority=99
 	
 	cp -ar $(CURDIR)/debian/tmp/usr/include/* $(CURDIR)/debian/libft-dev/usr/include/
 	mv $(CURDIR)/debian/libft0/usr/lib/libft.so $(CURDIR)/debian/libft-dev/usr/lib/libft.so

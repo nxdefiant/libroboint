@@ -1,2 +1,0 @@
-python:Versions=all
-shlibs:Depends=libc6 (>= 2.7-1), libusb-0.1-4 (>= 2:0.1.12)

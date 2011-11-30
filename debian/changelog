@@ -1,3 +1,33 @@
+libft (0.4.4) unstable; urgency=low
+
+  * Various changes
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Wed, 30 Nov 2011 19:51:19 +0100
+
+libft (0.4.3-20100406) unstable; urgency=low
+
+  * Next Test
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Wed, 30 Nov 2011 19:50:35 +0100
+
+libft (0.4.3-20100405) unstable; urgency=low
+
+  * Test Version for unknown Product IDs
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Sat, 19 Feb 2011 13:19:12 +0100
+
+libft (0.4.3-20100404) unstable; urgency=low
+
+  * recompiled (new Python Version)
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Thu, 17 Feb 2011 22:15:59 +0100
+
+libft (0.4.3-20100403) unstable; urgency=low
+
+  * Version 0.4.4 prerelease
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Sat, 03 Apr 2010 15:59:05 +0200
+
 libft (0.4.3-1) unstable; urgency=low
 
   * New Version 0.4.3
