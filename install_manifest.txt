@@ -1,5 +1,0 @@
-/usr/lib/libft.so.0.4.3
-/usr/lib/libft.so.0
-/usr/lib/libft.so
-/usr/include/ftlib.h
-/usr/bin/ftuploader
