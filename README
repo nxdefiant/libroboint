@@ -1,6 +1,6 @@
 README libft
 ==========
-libft - Open Source version of the fischertechnik ROBO Interface Library for Unix like systems - Version 0.4.3
+libft - Open Source version of the fischertechnik ROBO Interface Library for Unix like systems - Version 0.4.4
 
 The goal is to create a library that is fully compatible with the ftlib by knobloch eletronic.
 
@@ -103,7 +103,7 @@ LGPL, see license.txt
 
 Changes:
 <---------->
-0.4.4(working): -Some Bug fixes
+0.4.4:  -Some Bug fixes, fixes to work with Fedora 14
 0.4.3:  -Bug fix: Extension digital inputs at RoboRF
 	-ftdiagnose: Display connection status
 	-Added functions: (not in Knobloch lib):
