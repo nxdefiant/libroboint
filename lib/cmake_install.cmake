@@ -33,21 +33,35 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0.4.3")
-    FILE(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0.4.3"
-         RPATH "")
-  ENDIF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0.4.3")
+  FOREACH(file
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0.4.3"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so"
+      )
+    IF(EXISTS "${file}" AND
+       NOT IS_SYMLINK "${file}")
+      FILE(RPATH_CHECK
+           FILE "${file}"
+           RPATH "")
+    ENDIF()
+  ENDFOREACH()
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
     "/home/erik/Proggen/c/libft/libft/lib/libft.so.0.4.3"
     "/home/erik/Proggen/c/libft/libft/lib/libft.so.0"
     "/home/erik/Proggen/c/libft/libft/lib/libft.so"
     )
-  IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0.4.3")
-    IF(CMAKE_INSTALL_DO_STRIP)
-      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0.4.3")
-    ENDIF(CMAKE_INSTALL_DO_STRIP)
-  ENDIF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0.4.3")
+  FOREACH(file
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0.4.3"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libft.so"
+      )
+    IF(EXISTS "${file}" AND
+       NOT IS_SYMLINK "${file}")
+      IF(CMAKE_INSTALL_DO_STRIP)
+        EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "${file}")
+      ENDIF(CMAKE_INSTALL_DO_STRIP)
+    ENDIF()
+  ENDFOREACH()
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

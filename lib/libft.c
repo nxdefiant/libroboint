@@ -523,7 +523,10 @@ FT_HANDLE GetFtUsbDeviceHandleSerialNr(long int dwSN, long int dwTyp)
 
 	for(i=0; i < GetNumFtUsbDevice(); i++) {
 		ret = GetFtUsbDeviceHandle(i);
-		OpenFtUsbDevice(ret);
+		if (OpenFtUsbDevice(ret) != 0) {
+			fprintf(stderr, "Skipping device: already open\n");
+			continue;
+		}
 	
 		if ((dwTyp == FT_AUTO_TYPE || ret->type == dwTyp) && GetFtSerialNr(ret) == dwSN) {
 			CloseFtDevice(ret);
@@ -804,12 +807,12 @@ static void *FtThread(FT_HANDLE hFt)
 	switch(hFt->type) {
 		case FT_ROBO_IF_USB: // old firmware can not handle the new command, so stick with the old for now
 		case FT_ROBO_IF_COM:
+		default:
 			out[0] = 0xf2;
 			num_write = 17;
 			num_read = 21;
 			break;
 		case FT_ROBO_IO_EXTENSION:
-		default:
 			out[0] = 0xf2;
 			num_write = 6;
 			num_read = 6;
