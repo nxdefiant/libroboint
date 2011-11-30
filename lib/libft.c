@@ -41,7 +41,7 @@
  * Also included is an Interface Diagnose utility. See section Interface Diagnose
  *
  * \section dl_sec Download
- * Current Version: 0.4.3
+ * Current Version: 0.4.4
  *
  * See http://defiant.homedns.org/~erik/ft/libft/files/ \n
  * Download Latest version: http://defiant.homedns.org/~erik/ft/libft/files/libft-current.tar.gz
@@ -114,6 +114,7 @@
  *
  * \section changes_sec Changes
  * 
+ * - 0.4.4:	- Some Bug fixes, fixes to work with Fedora 14
  * - 0.4.3:	- Bug fix: Extension digital inputs at RoboRF
  *		- ftdiagnose: Display connection status
  *		- Added functions: (not in Knobloch lib):
