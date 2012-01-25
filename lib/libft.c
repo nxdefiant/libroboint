@@ -330,7 +330,7 @@ static unsigned int GetNthFtDeviceFromRF(struct usb_device *dev, int iNum)
 					
 	device = usb_open(dev);
 
-	for(i=1; i<9, iNum>0; i++) {
+	for(i=1; i<9 && iNum>0; i++) {
 		ret = usb_control_msg(device, 0xc0, 0x52, i<<8 | 0x05, 0, buffer, 35, FT_USB_TIMEOUT);
 		if (ret < 0) fprintf(stderr, "Error sending control msg 0xC0 0x52\n");
 		else if (buffer[0] == 0xfa && buffer[1] == 0) iNum--; // buffer[1] == 0xff => no device
