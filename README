@@ -1,6 +1,6 @@
-README libft
+README libroboint
 ==========
-libft - Open Source version of the fischertechnik ROBO Interface Library for Unix like systems - Version 0.4.4
+libroboint - Open Source version of the fischertechnik ROBO Interface Library for Unix like systems - Version 0.4.4
 
 The goal is to create a library that is fully compatible with the ftlib by knobloch eletronic.
 
@@ -49,14 +49,16 @@ To install the diagnose utility type
 make diag
 
 Debian packages are available. Please read http://vontaene.de/apt/README.txt.
-You can install them with apt-get install libft-all
+You can install them with apt-get install libroboint-all
 
 
 Permissions:
 <---------->
 When running udev you might want to copy the file fischertechnik.rules from the udev folder to /etc/udev/rules.d/ to get the correct permissions.
 Udev then needs a reload with
-udevcontrol reload_rules
+udevadm control --reload-rules (current udev)
+or 
+udevcontrol reload_rules (on old udev versions)
 You will also now need to replug your device.
 
 
@@ -84,8 +86,6 @@ It requires the python module (see above) and PyQT4. You can launch it by runnin
 
 Additional notes:
 <---------->
-The name of this library is libft, not ftlib (the original) to follow the UNIX naming scheme
-The name of the header file, ftlib.h may change to libft.h in the future.
 The windows notifications are not supported of course.
 
 We use long int for DWORD, unsigned char for BYTE, char * for LPCSTR and voic * for LPVOID
@@ -103,6 +103,8 @@ LGPL, see license.txt
 
 Changes:
 <---------->
+0.5:	-Libft renamed to libroboint to avoid name clashes with other software
+	-C Header file renamed to roboint.h
 0.4.4:  -Some Bug fixes, fixes to work with Fedora 14
 0.4.3:  -Bug fix: Extension digital inputs at RoboRF
 	-ftdiagnose: Display connection status
@@ -166,7 +168,7 @@ Changes:
 TODO:
 <---------->
 -find out what the value from GetAV() does mean
--debian: example.c => /usr/share/doc/libft-dev/examples/
+-debian: example.c => /usr/share/doc/libroboint-dev/examples/
 -read/write mem? robointerpreter.c, line 1110
 -program dl over serial (check robodummy, line 1340)
 -start/stop program over RF - where to sniff from?
