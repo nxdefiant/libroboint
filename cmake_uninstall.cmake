@@ -1,8 +1,8 @@
-IF(NOT EXISTS "/home/erik/Proggen/c/libft/libft/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/home/erik/Proggen/c/libft/libft/install_manifest.txt\"")
-ENDIF(NOT EXISTS "/home/erik/Proggen/c/libft/libft/install_manifest.txt")
+IF(NOT EXISTS "/home/erik/Proggen/c/libft/libroboint/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/home/erik/Proggen/c/libft/libroboint/install_manifest.txt\"")
+ENDIF(NOT EXISTS "/home/erik/Proggen/c/libft/libroboint/install_manifest.txt")
 
-FILE(READ "/home/erik/Proggen/c/libft/libft/install_manifest.txt" files)
+FILE(READ "/home/erik/Proggen/c/libft/libroboint/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

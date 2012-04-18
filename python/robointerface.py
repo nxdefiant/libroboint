@@ -143,9 +143,9 @@ def GetNumFtUsbDevices():
 
 	Returns Number of ft Interface devices on the USB bus found.
 	"""
-	sLibName = ctypes.util.find_library("ft")
+	sLibName = ctypes.util.find_library("roboint")
 	if not sLibName:
-		print >> sys.stderr, "Error: Can't find Library libft"
+		print >> sys.stderr, "Error: Can't find Library libroboint"
 	else:
 		lib = cdll.LoadLibrary(sLibName)
 		lib.InitFtUsbDeviceList()
@@ -235,9 +235,9 @@ class RoboInterface:
 		bStartTransferArea -- Start the transfer area. Usually you want that.
 		"""
 		self.transfer_area = None
-		sLibName = ctypes.util.find_library("ft")
+		sLibName = ctypes.util.find_library("roboint")
 		if not sLibName:
-			print >> sys.stderr, "Error: Can't find Library libft"
+			print >> sys.stderr, "Error: Can't find Library libroboint"
 		else:
 			self.lib = cdll.LoadLibrary(sLibName)
 

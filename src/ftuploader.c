@@ -20,16 +20,16 @@
 #include <string.h>
 #include <getopt.h>
 #include <usb.h>
-#include <ftlib.h>
+#include <roboint.h>
 
 #define PROGRAM_UPLOAD_PACKET_SIZE 128
 #define FLASH1 0x0
 #define FLASH2 0x1
 #define RAM 0x2
 #define INTERFACE_NUM_DEFAULT 0
-#define MAJOR_VERSION LIBFT_VERSION_MAJOR
-#define MINOR_VERSION LIBFT_VERSION_MINOR
-#define PATCH_VERSION LIBFT_VERSION_PATCH
+#define MAJOR_VERSION LIBROBOINT_VERSION_MAJOR
+#define MINOR_VERSION LIBROBOINT_VERSION_MINOR
+#define PATCH_VERSION LIBROBOINT_VERSION_PATCH
 
 int g_debug=0;
 #define debug_print(fmt, args...) if(g_debug) printf(fmt, ##args)
@@ -288,7 +288,7 @@ int mem_name_to_number(char *name) {
 void version() {
 	char *s = GetLibVersionStrg();
 	printf("ftuploader version: %d.%d.%d\n", MAJOR_VERSION, MINOR_VERSION, PATCH_VERSION);
-	printf("libft version: %s\n", s);
+	printf("libroboint version: %s\n", s);
 	free(s);
 }
 

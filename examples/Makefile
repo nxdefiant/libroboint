@@ -8,7 +8,7 @@ default_target: all
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/erik/Proggen/c/libft/libft
+CMAKE_SOURCE_DIR = /home/erik/Proggen/c/libft/libroboint
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/erik/Proggen/c/libft/libft
+CMAKE_BINARY_DIR = /home/erik/Proggen/c/libft/libroboint
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,7 +98,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/erik/Proggen/c/libft/libft && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/erik/Proggen/c/libft/libroboint && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -108,7 +108,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/erik/Proggen/c/libft/libft && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/erik/Proggen/c/libft/libft/CPackSourceConfig.cmake
+	cd /home/erik/Proggen/c/libft/libroboint && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/erik/Proggen/c/libft/libroboint/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -127,14 +127,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/erik/Proggen/c/libft/libft && $(CMAKE_COMMAND) -E cmake_progress_start /home/erik/Proggen/c/libft/libft/CMakeFiles /home/erik/Proggen/c/libft/libft/examples/CMakeFiles/progress.marks
-	cd /home/erik/Proggen/c/libft/libft && $(MAKE) -f CMakeFiles/Makefile2 examples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/erik/Proggen/c/libft/libft/CMakeFiles 0
+	cd /home/erik/Proggen/c/libft/libroboint && $(CMAKE_COMMAND) -E cmake_progress_start /home/erik/Proggen/c/libft/libroboint/CMakeFiles /home/erik/Proggen/c/libft/libroboint/examples/CMakeFiles/progress.marks
+	cd /home/erik/Proggen/c/libft/libroboint && $(MAKE) -f CMakeFiles/Makefile2 examples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/erik/Proggen/c/libft/libroboint/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/erik/Proggen/c/libft/libft && $(MAKE) -f CMakeFiles/Makefile2 examples/clean
+	cd /home/erik/Proggen/c/libft/libroboint && $(MAKE) -f CMakeFiles/Makefile2 examples/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/erik/Proggen/c/libft/libft && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/erik/Proggen/c/libft/libroboint && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/erik/Proggen/c/libft/libft && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
+	cd /home/erik/Proggen/c/libft/libroboint && $(MAKE) -f CMakeFiles/Makefile2 examples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/erik/Proggen/c/libft/libft && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/erik/Proggen/c/libft/libroboint && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/CMakeFiles/example.dir/rule:
-	cd /home/erik/Proggen/c/libft/libft && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/example.dir/rule
+	cd /home/erik/Proggen/c/libft/libroboint && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/example.dir/rule
 .PHONY : examples/CMakeFiles/example.dir/rule
 
 # Convenience name for target.
@@ -167,22 +167,22 @@ example: examples/CMakeFiles/example.dir/rule
 
 # fast build rule for target.
 example/fast:
-	cd /home/erik/Proggen/c/libft/libft && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/build
+	cd /home/erik/Proggen/c/libft/libroboint && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/build
 .PHONY : example/fast
 
 # target to build an object file
 example.o:
-	cd /home/erik/Proggen/c/libft/libft && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/example.o
+	cd /home/erik/Proggen/c/libft/libroboint && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/example.o
 .PHONY : example.o
 
 # target to preprocess a source file
 example.i:
-	cd /home/erik/Proggen/c/libft/libft && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/example.i
+	cd /home/erik/Proggen/c/libft/libroboint && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/example.i
 .PHONY : example.i
 
 # target to generate assembly for a file
 example.s:
-	cd /home/erik/Proggen/c/libft/libft && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/example.s
+	cd /home/erik/Proggen/c/libft/libroboint && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/example.s
 .PHONY : example.s
 
 # Help Target
@@ -214,6 +214,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/erik/Proggen/c/libft/libft && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/erik/Proggen/c/libft/libroboint && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

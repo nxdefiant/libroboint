@@ -8,7 +8,7 @@ default_target: all
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/erik/Proggen/c/libft/libft
+CMAKE_SOURCE_DIR = /home/erik/Proggen/c/libft/libroboint
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/erik/Proggen/c/libft/libft
+CMAKE_BINARY_DIR = /home/erik/Proggen/c/libft/libroboint
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -108,7 +108,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/erik/Proggen/c/libft/libft/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/erik/Proggen/c/libft/libroboint/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -127,9 +127,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/erik/Proggen/c/libft/libft/CMakeFiles /home/erik/Proggen/c/libft/libft/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/erik/Proggen/c/libft/libroboint/CMakeFiles /home/erik/Proggen/c/libft/libroboint/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/erik/Proggen/c/libft/libft/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/erik/Proggen/c/libft/libroboint/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -222,17 +222,17 @@ uninstall/fast:
 .PHONY : uninstall/fast
 
 #=============================================================================
-# Target rules for targets named ft
+# Target rules for targets named roboint
 
 # Build rule for target.
-ft: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ft
-.PHONY : ft
+roboint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roboint
+.PHONY : roboint
 
 # fast build rule for target.
-ft/fast:
-	$(MAKE) -f lib/CMakeFiles/ft.dir/build.make lib/CMakeFiles/ft.dir/build
-.PHONY : ft/fast
+roboint/fast:
+	$(MAKE) -f lib/CMakeFiles/roboint.dir/build.make lib/CMakeFiles/roboint.dir/build
+.PHONY : roboint/fast
 
 #=============================================================================
 # Target rules for targets named example
@@ -279,7 +279,7 @@ help:
 	@echo "... python"
 	@echo "... rebuild_cache"
 	@echo "... uninstall"
-	@echo "... ft"
+	@echo "... roboint"
 	@echo "... example"
 	@echo "... ftuploader"
 .PHONY : help

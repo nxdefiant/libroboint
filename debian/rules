@@ -25,7 +25,7 @@ configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	# Add here commands to configure the package.
-	cmake . -DCMAKE_INSTALL_PREFIX=/usr -DPYTHON_ROOT=$(CURDIR)/debian/libft-python -DDIAG_ROOT=$(CURDIR)/debian/libft-diag
+	cmake . -DCMAKE_INSTALL_PREFIX=/usr -DPYTHON_ROOT=$(CURDIR)/debian/libroboint-python -DDIAG_ROOT=$(CURDIR)/debian/libroboint-diag
 	touch configure-stamp
 
 
@@ -58,25 +58,25 @@ install: build
 	# Add here commands to install the package into debian/tmp
 	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
 
-	cp -ar $(CURDIR)/debian/tmp/usr/bin/* $(CURDIR)/debian/libft0/usr/bin/
-	cp -ar $(CURDIR)/debian/tmp/usr/lib/* $(CURDIR)/debian/libft0/usr/lib/
+	cp -ar $(CURDIR)/debian/tmp/usr/bin/* $(CURDIR)/debian/libroboint0/usr/bin/
+	cp -ar $(CURDIR)/debian/tmp/usr/lib/* $(CURDIR)/debian/libroboint0/usr/lib/
 
 	dh_installudev --priority=99
 	
-	cp -ar $(CURDIR)/debian/tmp/usr/include/* $(CURDIR)/debian/libft-dev/usr/include/
-	mv $(CURDIR)/debian/libft0/usr/lib/libft.so $(CURDIR)/debian/libft-dev/usr/lib/libft.so
+	cp -ar $(CURDIR)/debian/tmp/usr/include/* $(CURDIR)/debian/libroboint-dev/usr/include/
+	mv $(CURDIR)/debian/libroboint0/usr/lib/libroboint.so $(CURDIR)/debian/libroboint-dev/usr/lib/libroboint.so
 	
-	cp -ar $(CURDIR)/doc/* $(CURDIR)/debian/libft-doc/usr/share/libft/
+	cp -ar $(CURDIR)/doc/* $(CURDIR)/debian/libroboint-doc/usr/share/libroboint/
 
-	make python #--root $(CURDIR)/debian/libft-python;
+	make python #--root $(CURDIR)/debian/libroboint-python;
 
 	#cd diag/; pyuic4 diag.ui > ftdiagnose_ui.py
 	#cd diag/; pyuic4 open.ui > ftdiagnose_open_ui.py
-	make diag #--root $(CURDIR)/debian/libft-diag
-	#cd diag/; install -m644 ftdiagnose $(CURDIR)/debian/libft-diag/usr/bin/
+	make diag #--root $(CURDIR)/debian/libroboint-diag
+	#cd diag/; install -m644 ftdiagnose $(CURDIR)/debian/libroboint-diag/usr/bin/
 	
-	mkdir debian/libft0/DEBIAN
-	install -m644 debian/shlibs.libft debian/libft0/DEBIAN/shlibs
+	mkdir debian/libroboint0/DEBIAN
+	install -m644 debian/shlibs.libroboint debian/libroboint0/DEBIAN/shlibs
 
 
 # Build architecture-independent files here.

@@ -5,21 +5,21 @@ if(COMMAND cmake_policy)
 endif(COMMAND cmake_policy)
 
 
-project(libft C)
+project(libroboint C)
 
 # tgz
-SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "libft")
+SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "libroboint")
 SET(CPACK_PACKAGE_VENDOR "Erik Andresen")
 SET(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/README")
 SET(CPACK_PACKAGE_VERSION_MAJOR "0")
-SET(CPACK_PACKAGE_VERSION_MINOR "4")
-SET(CPACK_PACKAGE_VERSION_PATCH "4")
-SET(CPACK_PACKAGE_INSTALL_DIRECTORY "libft ${CPACK_VERSION_MAJOR}.${CPACK_VERSION_MINOR}")
+SET(CPACK_PACKAGE_VERSION_MINOR "5")
+SET(CPACK_PACKAGE_VERSION_PATCH "0")
+SET(CPACK_PACKAGE_INSTALL_DIRECTORY "libroboint ${CPACK_VERSION_MAJOR}.${CPACK_VERSION_MINOR}")
 SET(CPACK_SOURCE_STRIP_FILES "")
 SET(CPACK_GENERATOR "TGZ")
 SET(CPACK_SOURCE_GENERATOR "TGZ")
-SET(CPACK_SOURCE_IGNORE_FILES "CMakeCache.txt;CMakeCache.txt;cmake_install.cmake;CPackConfig.cmake;CPackSourceConfig.cmake;install_manifest.txt;.*.tar.gz;Makefile*;CMakeFiles;.*.dir;.*.swp;configure.ac;.deps;.pyc;tags;configure-stamp;build-stamp;_CPack_Packages;debian/libft0;debian/libft-all;debian/libft-dev;debian/libft-diag;debian/libft-doc;debian/libft-python;")
-SET(CPACK_SOURCE_PACKAGE_FILE_NAME "../libft-${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}")
+SET(CPACK_SOURCE_IGNORE_FILES "CMakeCache.txt;CMakeCache.txt;cmake_install.cmake;CPackConfig.cmake;CPackSourceConfig.cmake;install_manifest.txt;.*.tar.gz;Makefile*;CMakeFiles;.*.dir;.*.swp;configure.ac;.deps;.pyc;tags;configure-stamp;build-stamp;_CPack_Packages;debian/libroboint0;debian/libroboint-all;debian/libroboint-dev;debian/libroboint-diag;debian/libroboint-doc;debian/libroboint-python;")
+SET(CPACK_SOURCE_PACKAGE_FILE_NAME "../libroboint-${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}")
 INCLUDE(CPack)
 
 # uninstall
@@ -72,9 +72,9 @@ ELSE (DOXYGEN_INSTALLED)
 	MESSAGE(STATUS "Unable to create documentation!")
 ENDIF (DOXYGEN_INSTALLED)
 
-ADD_DEFINITIONS(-DLIBFT_VERSION_MAJOR=${CPACK_PACKAGE_VERSION_MAJOR})
-ADD_DEFINITIONS(-DLIBFT_VERSION_MINOR=${CPACK_PACKAGE_VERSION_MINOR})
-ADD_DEFINITIONS(-DLIBFT_VERSION_PATCH=${CPACK_PACKAGE_VERSION_PATCH})
+ADD_DEFINITIONS(-DLIBROBOINT_VERSION_MAJOR=${CPACK_PACKAGE_VERSION_MAJOR})
+ADD_DEFINITIONS(-DLIBROBOINT_VERSION_MINOR=${CPACK_PACKAGE_VERSION_MINOR})
+ADD_DEFINITIONS(-DLIBROBOINT_VERSION_PATCH=${CPACK_PACKAGE_VERSION_PATCH})
 
 add_subdirectory(lib)
 add_subdirectory(examples)

@@ -1,16 +1,16 @@
-Source: libft
+Source: libroboint
 Priority: extra
 Maintainer: Erik Andresen <erik@defiant.homedns.org>
 Build-Depends: debhelper (>= 5), python (>= 2.0), python-central
 Standards-Version: 3.7.2
 Section: libs
 
-Package: libft-dev
+Package: libroboint-dev
 Section: libdevel
 Architecture: all
-Depends: libft0 (= ${binary:Version}), cmake, libusb-dev
+Depends: libroboint0 (= ${binary:Version}), cmake, libusb-dev
 Description: library for the fischertechnik ROBO Interface - Headers
- libft is an implementation of the fischertechnik ROBO interface library for
+ libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
  with the ftlib by knobloch electronic. This library should work on any
  systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
@@ -18,14 +18,14 @@ Description: library for the fischertechnik ROBO Interface - Headers
  .
  This package contains the necessary files needed to build own programs.
 
-Package: libft0
+Package: libroboint0
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Suggests: libft-doc
-Replaces: libft
+Suggests: libroboint-doc
+Replaces: libroboint
 Description: library for the fischertechnik ROBO Interface
- libft is an implementation of the fischertechnik ROBO interface library for
+ libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
  with the ftlib by knobloch electronic. This library should work on any
  systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
@@ -33,14 +33,14 @@ Description: library for the fischertechnik ROBO Interface
  .
  This package contains the necessary files needed to run programs.
 
-Package: libft-python
+Package: libroboint-python
 Section: libdevel
 Architecture: all
-Depends: libft0 (= ${binary:Version}), python-ctypes
+Depends: libroboint0 (= ${binary:Version}), python-ctypes
 XS-Python-Version: >= 2.0
 XB-Python-Version: ${python:Versions}
 Description: library for the fischertechnik ROBO Interface - Python module
- libft is an implementation of the fischertechnik ROBO interface library for
+ libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
  with the ftlib by knobloch electronic. This library should work on any
  systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
@@ -48,12 +48,12 @@ Description: library for the fischertechnik ROBO Interface - Python module
  .
  This package contains the python layer.
 
-Package: libft-doc
+Package: libroboint-doc
 Section: doc
 Architecture: all
-Depends: libft0 (= ${binary:Version})
+Depends: libroboint0 (= ${binary:Version})
 Description: library for the fischertechnik ROBO Interface - Documentation
- libft is an implementation of the fischertechnik ROBO interface library for
+ libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
  with the ftlib by knobloch electronic. This library should work on any
  systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
@@ -61,14 +61,14 @@ Description: library for the fischertechnik ROBO Interface - Documentation
  .
  This package contains the C documentation.
 
-Package: libft-diag
+Package: libroboint-diag
 Section: libdevel
 Architecture: all
-Depends: libft0 (= ${binary:Version}), libft-python (= ${binary:Version}), python-qt4
+Depends: libroboint0 (= ${binary:Version}), libroboint-python (= ${binary:Version}), python-qt4
 XS-Python-Version: >= 2.0
 XB-Python-Version: ${python:Versions}
 Description: library for the fischertechnik ROBO Interface - Python module
- libft is an implementation of the fischertechnik ROBO interface library for
+ libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
  with the ftlib by knobloch electronic. This library should work on any
  systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
@@ -76,14 +76,14 @@ Description: library for the fischertechnik ROBO Interface - Python module
  .
  This package contains the C diagnose utility.
 
-Package: libft-all
+Package: libroboint-all
 Section: libdevel
 Architecture: any
-Depends: libft0 (= ${binary:Version}), libft-python (= ${binary:Version}), libft-diag (= ${binary:Version}), libft-dev (=${binary:Version}), python-qt4
+Depends: libroboint0 (= ${binary:Version}), libroboint-python (= ${binary:Version}), libroboint-diag (= ${binary:Version}), libroboint-dev (=${binary:Version}), python-qt4
 XS-Python-Version: >= 2.0
 XB-Python-Version: ${python:Versions}
 Description: library for the fischertechnik ROBO Interface - Python module
- libft is an implementation of the fischertechnik ROBO interface library for
+ libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
  with the ftlib by knobloch electronic. This library should work on any
  systems supported by libusb, like Linux, BSD, and Mac OS X. A Python
@@ -91,3 +91,50 @@ Description: library for the fischertechnik ROBO Interface - Python module
  .
  This package will install everything
 
+Package: libft-dev
+Architecture: all
+Depends: ${misc:Depends}, libroboint-dev
+Section: oldlibs
+Description: transitional dummy package
+ This package is a dummy transitional package after the rename of libft to libroboint.
+ It can be safely removed.
+
+Package: libft0
+Architecture: all
+Depends: ${misc:Depends}, libroboint0
+Section: oldlibs
+Description: transitional dummy package
+ This package is a dummy transitional package after the rename of libft to libroboint.
+ It can be safely removed.
+
+Package: libft-python
+Architecture: all
+Depends: ${misc:Depends}, libroboint-python
+Section: oldlibs
+Description: transitional dummy package
+ This package is a dummy transitional package after the rename of libft to libroboint.
+ It can be safely removed.
+
+Package: libft-doc
+Architecture: all
+Depends: ${misc:Depends}, libroboint-doc
+Section: oldlibs
+Description: transitional dummy package
+ This package is a dummy transitional package after the rename of libft to libroboint.
+ It can be safely removed.
+
+Package: libft-diag
+Architecture: all
+Depends: ${misc:Depends}, libroboint-diag
+Section: oldlibs
+Description: transitional dummy package
+ This package is a dummy transitional package after the rename of libft to libroboint.
+ It can be safely removed.
+
+Package: libft-all
+Architecture: all
+Depends: ${misc:Depends}, libroboint-all
+Section: oldlibs
+Description: transitional dummy package
+ This package is a dummy transitional package after the rename of libft to libroboint.
+ It can be safely removed.

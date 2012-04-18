@@ -1,4 +1,4 @@
-?package(libft-diag):\
+?package(libroboint-diag):\
        needs="X11"\
        section="Applications/Programming"\
        title="ft Diagnose"\
