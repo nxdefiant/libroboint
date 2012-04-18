@@ -69,7 +69,7 @@
  * After installing you should run
  * - ldconfig
  *
- * to make the library known to your system. Make sure that /etc/ld.so.conf is configured to include /usr/local/li
+ * to make the library known to your system. Make sure that /etc/ld.so.conf is configured to include /usr/local/lib
  *
  * To install the diagnose utility type
  * - make diag
@@ -80,13 +80,13 @@
  * \subsection step3 Step 3: udev
  * When running udev you might want to copy the file fischertechnik.rules from the udev folder to /etc/udev/rules.d/ to get the correct permissions.\n
  * Udev then needs a reload with
- * - udevadm control --reload-rules (current udev)
- * or 
- * - udevcontrol reload_rules (on old udev versions)
+ * - udevadm control --reload-rules (current udev)\n
+ * or\n
+ * - udevcontrol reload_rules (on old udev versions)\n
  *
  * You will now need to replug your device.
  *
- * \subsection step4 Step 4: Create Documentation\n
+ * \subsection step4 Step 4: Create Documentation
  * Type\n
  * - make doc\n
  * to create the html API documentation.
