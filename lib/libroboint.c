@@ -839,7 +839,7 @@ static void *FtThread(FT_HANDLE hFt)
 			//ret = usb_control_msg(hFt->device, 0xc0, 0xfb, 0x102, 0x1, in, 2, FT_USB_TIMEOUT);
 			ret = usb_control_msg(hFt->device, 0xc0, 0xfb, hFt->transfer_area.RfModulNr << 8 | 0x02, 0x1, in, 2, FT_USB_TIMEOUT);
 			if (ret != 2) {
-				fprintf(stderr, "%d FtThread: Error initiating RF Module!\n");
+				fprintf(stderr, "FtThread: Error initiating RF Module!\n");
 				area->TransferAktiv = 0;
 			}
 			break;
@@ -1262,7 +1262,7 @@ long int DownloadFtProgram(FT_HANDLE hFt, long int dwMemBlock, unsigned char *pb
 		printf("\n");*/
 		ret = usb_control_msg(hFt->device, 0x40, 0x11, i+1, crc, buffer, PROGRAM_UPLOAD_PACKET_SIZE, FT_USB_TIMEOUT_LONG);
 		if (ret < 0) {
-			fprintf(stderr, "Error sending control msg 0x40 0x11 0x%x\n", i+1);
+			fprintf(stderr, "Error sending control msg 0x40 0x11 0x%lx\n", i+1);
 			return ret;
 		}
 

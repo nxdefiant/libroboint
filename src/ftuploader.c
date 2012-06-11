@@ -106,7 +106,7 @@ int read_hex(char *filename, char **result, int *dest)
 		fgets(buffer, 4+1, f); // address
 		if (feof(f)) break;
 		strncpy(tmp, buffer, 4+1);
-		sscanf(tmp, "%x", &addr);
+		sscanf(tmp, "%x", (unsigned int *)&addr);
 		
 		diff = (addr - addr_pre) - len_pre;
 		if (diff > 0) {
@@ -488,8 +488,8 @@ int main(int argc, char *argv[]) {
 				printf("Serial:\t\t%s\n", s);
 				free(s);
 				GetRFMode(RBInt, &frequency, &callsign);
-				printf("RF frequency:\t\t%d\n", frequency);
-				printf("RF call sign:\t\t%d\n", callsign);
+				printf("RF frequency:\t\t%ld\n", frequency);
+				printf("RF call sign:\t\t%ld\n", callsign);
 				break;
 			case 'f':
 				upload_firmware(RBInt, optarg);
