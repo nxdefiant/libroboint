@@ -40,6 +40,9 @@
  * Running ftuploader --help should give you an idea how to use it.\n
  * Also included is an Interface Diagnose utility. See section Interface Diagnose
  *
+ * \warning Please note that only the older Robo- and Intelligent Interface are supported.\n
+ *  The new ROBO TX Controller is not supported!
+ *
  * \section dl_sec Download
  * Current Version: 0.5.0
  *

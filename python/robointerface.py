@@ -319,7 +319,7 @@ class RoboInterface:
 		SetMotor(1, iSpeed=-5) # faster right
 
 		Arguments:
-		iMotor:		-- Motor to change 1..Max
+		iMotor:		-- Motor to change 1..Max (1..4 for Master, 4..8 for Slave 1 etc)
 		Keyword arguments:
 		cDirection 	-- Either l (left), r (right) or s (stop)
 		iSpeed 		-- Speed to use, defaults to max.
