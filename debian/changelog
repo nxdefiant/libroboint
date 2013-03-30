@@ -1,3 +1,9 @@
+libroboint (0.5.1) UNRELEASED; urgency=low
+
+  * Updated to 0.5.1
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Sat, 30 Mar 2013 16:07:54 +0100
+
 libroboint (0.5.0) unstable; urgency=low
 
   * New Version 0.5: libft renamed to libroboint
