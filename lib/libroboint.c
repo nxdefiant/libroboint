@@ -1,6 +1,6 @@
 /** @file
  *
- * Copyright (C) 2007 Erik Andresen erik@vontaene.de
+ * Copyright (C) 2013 Erik Andresen erik@vontaene.de
  *
  * Open Source version of the fischertechnik ROBO Interface Library for Unix like systems
  *
@@ -44,7 +44,7 @@
  *  The new ROBO TX Controller is not supported!
  *
  * \section dl_sec Download
- * Current Version: 0.5.0
+ * Current Version: 0.5.1
  *
  * See http://defiant.homedns.org/~erik/ft/libft/files/ \n
  * Download Latest version: http://defiant.homedns.org/~erik/ft/libft/files/libroboint-current.tar.gz
@@ -119,6 +119,7 @@
  *
  * \section changes_sec Changes
  *
+ * - 0.5.1:	- Intelligent Interface fixes
  * - 0.5.0:	- Libft renamed to libroboint to avoid name clashes with other software 
  *		- C Header file renamed to roboint.h
  * - 0.4.4:	- Some Bug fixes, fixes to work with Fedora 14
