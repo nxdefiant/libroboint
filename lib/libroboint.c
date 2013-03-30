@@ -596,7 +596,7 @@ FT_HANDLE OpenFtCommDevice(char *sDevice, long int dwTyp, long int dwZyklus)
         ret->newioset.c_oflag = 0;
         ret->newioset.c_lflag = 0;
         ret->newioset.c_cc[VTIME] = 1;
-        ret->newioset.c_cc[VMIN] = 3;
+        ret->newioset.c_cc[VMIN] = 4;
 	tcflush(dev, TCIFLUSH);
 	tcsetattr(dev, TCSANOW, &ret->newioset);
 	ret->sdev = dev;
