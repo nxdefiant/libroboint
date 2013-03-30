@@ -231,24 +231,25 @@ class DiagForm(QtGui.QMainWindow, Thread):
 		self.openapp.show()
 
 	def open_device_selected(self):
+		sSerialDevice = str(self.sSerialDevice)
 		if self.selectDeviceType == 1:
-			self.pInterface = RoboInterface(serialDevice=self.sSerialDevice, SerialType = RoboInterface.FT_ROBO_IF_COM)
+			self.pInterface = RoboInterface(serialDevice=sSerialDevice, SerialType = RoboInterface.FT_ROBO_IF_COM)
 		elif self.selectDeviceType == 2:
-			self.pInterface = RoboInterface(serialDevice=self.sSerialDevice, SerialType = RoboInterface.FT_INTELLIGENT_IF)
+			self.pInterface = RoboInterface(serialDevice=sSerialDevice, SerialType = RoboInterface.FT_INTELLIGENT_IF)
 		elif self.selectDeviceType == 3:
-			self.pInterface = RoboInterface(serialDevice=self.sSerialDevice, SerialType = RoboInterface.FT_INTELLIGENT_IF_SLAVE)
+			self.pInterface = RoboInterface(serialDevice=sSerialDevice, SerialType = RoboInterface.FT_INTELLIGENT_IF_SLAVE)
 		else:
 			self.pInterface = RoboInterface(self.iUSBDevice, bEnableDist = self.bEnableDist)
 		if not self.pInterface.transfer_area:
-			self.muh = QtGui.QMessageBox.critical(None, "Error", "Unable to open selected Interface")
+			self.pErrorBox = QtGui.QMessageBox.critical(None, "Error", "Unable to open selected Interface")
 		else:
 			self.ui.tabWidget.setEnabled(1)
 			self.ui.tabWidget.setTabEnabled(0, 1)
 			
-			type = self.pInterface.GetDeviceType()
-			if type == RoboInterface.FT_INTELLIGENT_IF_SLAVE:
+			typ = self.pInterface.GetDeviceType()
+			if typ == RoboInterface.FT_INTELLIGENT_IF_SLAVE:
 				self.ui.tabWidget.setTabEnabled(1, 1)
-			elif type in [RoboInterface.FT_ROBO_IF_USB, RoboInterface.FT_ROBO_IF_OVER_RF, RoboInterface.FT_ROBO_RF_DATA_LINK]:
+			elif typ in [RoboInterface.FT_ROBO_IF_USB, RoboInterface.FT_ROBO_IF_OVER_RF, RoboInterface.FT_ROBO_RF_DATA_LINK]:
 				self.ui.tabWidget.setTabEnabled(1, 1)
 				self.ui.tabWidget.setTabEnabled(2, 1)
 				self.ui.tabWidget.setTabEnabled(3, 1)
