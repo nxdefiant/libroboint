@@ -1042,7 +1042,7 @@ static void *FtThread(FT_HANDLE hFt)
 			perror("read timer");
 			exit(1);
 		}
-		if (missed > 1) fprintf(stderr, "FtThread missed %lld wakeups\n", missed);
+		//if (missed > 1) fprintf(stderr, "FtThread missed %lld wakeups\n", missed);
 	}
 	if (hFt->type == FT_ROBO_IF_OVER_RF || hFt->type == FT_ROBO_RF_DATA_LINK) {
 		ret = usb_control_msg(hFt->device, 0xc0, 0x21, hFt->transfer_area.RfModulNr << 8, 0, in, 1, FT_USB_TIMEOUT);
