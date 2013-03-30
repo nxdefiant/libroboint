@@ -580,7 +580,7 @@ FT_HANDLE OpenFtCommDevice(char *sDevice, long int dwTyp, long int dwZyklus)
 	sem_init(&ret->lock, 0, 1);
 	memset(&ret->transfer_area, 0, sizeof(struct _FT_TRANSFER_AREA));
 	ret->transfer_area.TransferAktiv = 0;
-	ret->analogcycle = dwZyklus/2.0+0.5;
+	ret->analogcycle = 2;
 	ret->query_time = INTERFACE_QUERY_TIME_SERIAL;
 	ret->transfer_area.RfModulNr = -1;
 	ret->interface_connected = 0;
@@ -595,7 +595,7 @@ FT_HANDLE OpenFtCommDevice(char *sDevice, long int dwTyp, long int dwZyklus)
         ret->newioset.c_oflag = 0;
         ret->newioset.c_lflag = 0;
         ret->newioset.c_cc[VTIME] = 1;
-        ret->newioset.c_cc[VMIN] = 0;
+        ret->newioset.c_cc[VMIN] = 3;
 	tcflush(dev, TCIFLUSH);
 	tcsetattr(dev, TCSANOW, &ret->newioset);
 	ret->sdev = dev;
@@ -807,6 +807,9 @@ static void *FtThread(FT_HANDLE hFt)
 	int usb_endpoint_read = FT_ENDPOINT_INTERRUPT_IN;
 	int i=0;
 	int ii_speed = 0;
+	int timer_fd;
+	struct itimerspec itval;
+	uint64_t missed;
 
 	out[0] = ABF_IF_COMPLETE;
 	area->TransferAktiv = 1;
@@ -847,6 +850,16 @@ static void *FtThread(FT_HANDLE hFt)
 			}
 			break;
 		}
+
+	// Setup timer
+	timer_fd = timerfd_create(CLOCK_MONOTONIC, 0);
+	itval.it_interval.tv_sec = 0;
+	itval.it_interval.tv_nsec = hFt->query_time*1000; // in µs
+	itval.it_value.tv_sec = 0;
+	itval.it_value.tv_nsec = 1; // arm timer
+	if (timerfd_settime(timer_fd, 0, &itval, NULL) < 0) {
+		perror("timerfd_settime");
+	}
 
 	while(area->TransferAktiv == 1) {
 		sem_wait(&hFt->lock);
@@ -898,10 +911,10 @@ static void *FtThread(FT_HANDLE hFt)
 			i++;
 			num_read = 1;
 			out[0] = 0xC1;
-			if (i % 20) { // EX
+			if (i % hFt->analogcycle == 0) { // EX
 				out[0] = 0xC5;
 				num_read = 3;
-			} else if (i % 10) { // EY
+			} else if (i % hFt->analogcycle == 1) { // EY
 				out[0] = 0xC9;
 				num_read = 3;
 			}
@@ -910,10 +923,10 @@ static void *FtThread(FT_HANDLE hFt)
 			num_read = 2;
 			out[0] = 0xC2;
 			out[2] = out[5];
-			if (i % 20) { // EX
+			if (i % hFt->analogcycle == 0) { // EX
 				out[0] = 0xC6;
 				num_read = 4;
-			} else if (i % 10) { // EY
+			} else if (i % hFt->analogcycle == 1) { // EY
 				out[0] = 0xCA;
 				num_read = 4;
 			}
@@ -958,7 +971,7 @@ static void *FtThread(FT_HANDLE hFt)
 		}
 		if (ret != num_read) {
 			hFt->interface_connected = 0;
-			fprintf(stderr, "FtThread: Error reading from the Interface\n");
+			fprintf(stderr, "FtThread: Error reading from the Interface. Got %d of %d bytes\n", ret, num_read);
 			usleep(hFt->query_time);
 			continue;
 		}
@@ -1006,17 +1019,23 @@ static void *FtThread(FT_HANDLE hFt)
 		area->AVS3 |= (in[25] & 0x30) << 4;
 		// 26...42
 		if (hFt->type == FT_INTELLIGENT_IF || hFt->type == FT_INTELLIGENT_IF_SLAVE) {
-			if (i % hFt->analogcycle) { // EX
-				area->AX = in[1] & (8<<in[2]);
-			} else if (i % (2*hFt->analogcycle)) { // EY
-				area->AY = in[1] & (8<<in[2]);
+			if (i % hFt->analogcycle == 0) { // EX
+				area->AX = in[2] | (in[1]<<8);
+			} else if (i % hFt->analogcycle == 1) { // EY
+				area->AY = in[2] | (in[1]<<8);
 			}
 		}
 		sem_post(&hFt->lock);
 
 		hFt->interface_connected = 1;
 
-		usleep(hFt->query_time);
+		/* Wait for the next timer event. If we have missed any the
+		 * 	   number is written to "missed" */
+		if (read(timer_fd, &missed, sizeof(missed)) <= 0) {
+			perror("read timer");
+			exit(1);
+		}
+		if (missed > 1) fprintf(stderr, "FtThread missed %lld wakeups\n", missed);
 	}
 	if (hFt->type == FT_ROBO_IF_OVER_RF || hFt->type == FT_ROBO_RF_DATA_LINK) {
 		ret = usb_control_msg(hFt->device, 0xc0, 0x21, hFt->transfer_area.RfModulNr << 8, 0, in, 1, FT_USB_TIMEOUT);
@@ -1066,6 +1085,7 @@ long int ResetFtTransfer(FT_HANDLE hFt) {
 long int StartFtTransferArea(FT_HANDLE hFt, NOTIFICATION_EVENTS* ignored)
 {
 	int ret;
+	struct sched_param param;
 	
 	if (hFt == NULL) {
 		fprintf(stderr, "StartFtTransferArea: No such device\n");
@@ -1079,6 +1099,12 @@ long int StartFtTransferArea(FT_HANDLE hFt, NOTIFICATION_EVENTS* ignored)
 		perror("StartFtTransferArea pthread_create");
 		return ret;
 	}
+
+	// Try to set realtime priority
+	param.sched_priority = 1;
+	if (pthread_setschedparam(hFt->t, SCHED_FIFO, &param) != 0) {
+		perror("Note - Unable to set realtime priority");
+	};
 
 	return FTLIB_ERR_SUCCESS;
 }
