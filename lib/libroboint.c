@@ -1019,11 +1019,17 @@ static void *FtThread(FT_HANDLE hFt)
 		area->AVS2 |= (in[25] & 0xC) << 6;
 		area->AVS3 |= (in[25] & 0x30) << 4;
 		// 26...42
-		if (hFt->type == FT_INTELLIGENT_IF || hFt->type == FT_INTELLIGENT_IF_SLAVE) {
+		if (hFt->type == FT_INTELLIGENT_IF) {
 			if (i % hFt->analogcycle == 0) { // EX
 				area->AX = in[2] | (in[1]<<8);
 			} else if (i % hFt->analogcycle == 1) { // EY
 				area->AY = in[2] | (in[1]<<8);
+			}
+		} else if (hFt->type == FT_INTELLIGENT_IF_SLAVE) {
+			if (i % hFt->analogcycle == 0) { // EX
+				area->AX = in[3] | (in[2]<<8);
+			} else if (i % hFt->analogcycle == 1) { // EY
+				area->AY = in[3] | (in[2]<<8);
 			}
 		}
 		sem_post(&hFt->lock);
