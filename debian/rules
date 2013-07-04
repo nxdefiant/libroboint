@@ -45,7 +45,7 @@ clean:
 	rm -f build-stamp configure-stamp CMakeCache.txt
 
 	# Add here commands to clean up after the build process.
-	$(MAKE) clean
+	if [ -f Makefile ]; then $(MAKE) clean; fi
 
 	dh_clean 
 
@@ -58,20 +58,25 @@ install: build
 	# Add here commands to install the package into debian/tmp
 	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
 
+	mkdir -p $(CURDIR)/debian/libroboint0/usr/bin
+	mkdir -p $(CURDIR)/debian/libroboint0/usr/lib
 	cp -ar $(CURDIR)/debian/tmp/usr/bin/* $(CURDIR)/debian/libroboint0/usr/bin/
 	cp -ar $(CURDIR)/debian/tmp/usr/lib/* $(CURDIR)/debian/libroboint0/usr/lib/
 
 	dh_installudev --priority=99
 	
+	mkdir -p $(CURDIR)/debian/libroboint-dev/usr/include
 	cp -ar $(CURDIR)/debian/tmp/usr/include/* $(CURDIR)/debian/libroboint-dev/usr/include/
-	mv $(CURDIR)/debian/libroboint0/usr/lib/libroboint.so $(CURDIR)/debian/libroboint-dev/usr/lib/libroboint.so
+	#mv $(CURDIR)/debian/libroboint0/usr/lib/libroboint.so $(CURDIR)/debian/libroboint-dev/usr/lib/libroboint.so
 	
+	mkdir -p $(CURDIR)/debian/libroboint-doc/usr/share/libroboint
 	cp -ar $(CURDIR)/doc/* $(CURDIR)/debian/libroboint-doc/usr/share/libroboint/
 
 	make python #--root $(CURDIR)/debian/libroboint-python;
 
 	#cd diag/; pyuic4 diag.ui > ftdiagnose_ui.py
 	#cd diag/; pyuic4 open.ui > ftdiagnose_open_ui.py
+	mkdir -p $(CURDIR)/debian/libroboint-diag/usr/bin/
 	make diag #--root $(CURDIR)/debian/libroboint-diag
 	#cd diag/; install -m644 ftdiagnose $(CURDIR)/debian/libroboint-diag/usr/bin/
 	

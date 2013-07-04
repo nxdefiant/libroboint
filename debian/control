@@ -1,14 +1,14 @@
 Source: libroboint
 Priority: extra
 Maintainer: Erik Andresen <erik@defiant.homedns.org>
-Build-Depends: debhelper (>= 5), python (>= 2.0), python-central
+Build-Depends: debhelper (>= 5), cmake, libusb-dev, python (>= 2.0), python-central, doxygen
 Standards-Version: 3.7.2
 Section: libs
 
 Package: libroboint-dev
 Section: libdevel
 Architecture: all
-Depends: libroboint0 (= ${binary:Version}), cmake, libusb-dev
+Depends: libroboint0 (= ${binary:Version})
 Description: library for the fischertechnik ROBO Interface - Headers
  libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
