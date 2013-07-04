@@ -206,6 +206,7 @@ class RoboInterface:
 	FT_ROBO_IF_COM              =  70
 	FT_ROBO_IF_OVER_RF          =  80
 	FT_ROBO_IO_EXTENSION        =  90
+	FT_ROBO_LT_CONTROLLER       =  91
 	FT_ROBO_RF_DATA_LINK	    = 110
 
 	# Distance Input settings

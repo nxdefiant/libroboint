@@ -630,6 +630,7 @@ char IsFtInterfaceConnected(FT_HANDLE hFt);
 #define     FT_ROBO_IF_COM              70      // FT-Robo Interface connect with COM- (serial-) Port
 #define     FT_ROBO_IF_OVER_RF          80      // FT-Robo Interface connect over RF-Data-Link
 #define     FT_ROBO_IO_EXTENSION        90      // FT-Robo I/O-Extension
+#define     FT_ROBO_LT_CONTROLLER       91      // FT-Robo LT Controller
 #define     FT_ROBO_RF_DATA_LINK        110     // FT-Robo RF Data Link
 #define     FT_MAX_TYP_NUMBER           999     // Max Typ Number
 

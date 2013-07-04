@@ -44,7 +44,7 @@
  *  The new ROBO TX Controller is not supported!
  *
  * \section dl_sec Download
- * Current Version: 0.5.1
+ * Current Version: 0.5.2
  *
  * See http://defiant.homedns.org/~erik/ft/libft/files/ \n
  * Download Latest version: http://defiant.homedns.org/~erik/ft/libft/files/libroboint-current.tar.gz
@@ -118,7 +118,7 @@
  *
  *
  * \section changes_sec Changes
- *
+ * - 0.5.2:	- Added experimental support for Robo LT Controller
  * - 0.5.1:	- Intelligent Interface fixes
  * - 0.5.0:	- Libft renamed to libroboint to avoid name clashes with other software 
  *		- C Header file renamed to roboint.h
@@ -217,6 +217,7 @@
 #define ROBO_IF_PRODUCT_ID 0x1
 #define EXT_IF_PRODUCT_ID 0x2
 #define RF_DATA_LINK_PRODUCT_ID 0x3
+#define LT_IF_PRODUCT_ID 0xa
 #define ABF_IF_COMPLETE 0x8b // 0xf2
 #define ABF_IF_COMPLETE_NUM_WRITE 32
 #define ABF_IF_COMPLETE_NUM_READ 42
@@ -421,6 +422,8 @@ static int FtproductIDToInterfaceID(int iProductID)
 			return FT_ROBO_IO_EXTENSION;
 		case RF_DATA_LINK_PRODUCT_ID:
 			return FT_ROBO_RF_DATA_LINK;
+		case LT_IF_PRODUCT_ID:
+			return FT_ROBO_LT_CONTROLLER;
 	}
 
 	return 0;
@@ -436,6 +439,8 @@ static int FtInterfaceIDToProductID(int InterfaceID)
 			return EXT_IF_PRODUCT_ID;
 		case FT_ROBO_RF_DATA_LINK:
 			return RF_DATA_LINK_PRODUCT_ID;
+		case FT_ROBO_LT_CONTROLLER:
+			return LT_IF_PRODUCT_ID;
 	}
 
 	return 0;
@@ -675,6 +680,9 @@ long int GetFtDeviceTypeString(FT_HANDLE hFt, char *dest, int len)
 		case FT_ROBO_IF_OVER_RF:
 			strncpy(dest, "Robo Interface over RF Datalink", len);
 			break;
+		case FT_ROBO_LT_CONTROLLER:
+			strncpy(dest, "Robo LT Controller", len);
+			break;
 		default:
 			strncpy(dest, "Unknown", len);
 	}
@@ -740,10 +748,6 @@ long int CloseFtDevice(FT_HANDLE hFt)
 
 	switch(hFt->type) {
 		// usb
-		case FT_ROBO_RF_DATA_LINK:
-		case FT_ROBO_IF_OVER_RF:
-		case FT_ROBO_IF_USB:
-		case FT_ROBO_IO_EXTENSION:
 		default:
 			ret = usb_release_interface(hFt->device, 0);
 			if (ret < 0) {
@@ -818,12 +822,13 @@ static void *FtThread(FT_HANDLE hFt)
 	switch(hFt->type) {
 		case FT_ROBO_IF_USB: // old firmware can not handle the new command, so stick with the old for now
 		case FT_ROBO_IF_COM:
-		default:
 			out[0] = 0xf2;
 			num_write = 17;
 			num_read = 21;
 			break;
+		default:
 		case FT_ROBO_IO_EXTENSION:
+		case FT_ROBO_LT_CONTROLLER:
 			out[0] = 0xf2;
 			num_write = 6;
 			num_read = 6;
@@ -866,20 +871,20 @@ static void *FtThread(FT_HANDLE hFt)
 		sem_wait(&hFt->lock);
 		out[1] = area->M_Main;
 		out[2] = (area->MPWM_Main[0] & 0x7) | (area->MPWM_Main[1]<<3 & 0x38) | (area->MPWM_Main[2]<<6 & 0xC0);
-		out[3] = (area->MPWM_Main[2] & 0x1) | (area->MPWM_Main[3]<<1 & 0xE) | (area->MPWM_Main[4]<<4 & 0x70) | (area->MPWM_Main[5]<<7 & 0x80);
-		out[4] = (area->MPWM_Main[5] & 0x3) | (area->MPWM_Main[6]<<2 & 0x1C) | (area->MPWM_Main[7]<<5 & 0xE0);
+		out[3] = (area->MPWM_Main[2]>>2 & 0x1) | (area->MPWM_Main[3]<<1 & 0xE) | (area->MPWM_Main[4]<<4 & 0x70) | (area->MPWM_Main[5]<<7 & 0x80);
+		out[4] = (area->MPWM_Main[5]>>1 & 0x3) | (area->MPWM_Main[6]<<2 & 0x1C) | (area->MPWM_Main[7]<<5 & 0xE0);
 		out[5] = area->M_Sub1;
 		out[6] = (area->MPWM_Sub1[0] & 0x7) | (area->MPWM_Sub1[1]<<3 & 0x38) | (area->MPWM_Sub1[2]<<6 & 0xC0);
-		out[7] = (area->MPWM_Sub1[2] & 0x1) | (area->MPWM_Sub1[3]<<1 & 0xE) | (area->MPWM_Sub1[4]<<4 & 0x70) | (area->MPWM_Sub1[5]<<7 & 0x80);
-		out[8] = (area->MPWM_Sub1[5] & 0x3) | (area->MPWM_Sub1[6]<<2 & 0x1C) | (area->MPWM_Sub1[7]<<5 & 0xE0);
+		out[7] = (area->MPWM_Sub1[2]>>2 & 0x1) | (area->MPWM_Sub1[3]<<1 & 0xE) | (area->MPWM_Sub1[4]<<4 & 0x70) | (area->MPWM_Sub1[5]<<7 & 0x80);
+		out[8] = (area->MPWM_Sub1[5]>>1 & 0x3) | (area->MPWM_Sub1[6]<<2 & 0x1C) | (area->MPWM_Sub1[7]<<5 & 0xE0);
 		out[9] = area->M_Sub2;
 		out[10] = (area->MPWM_Sub2[0] & 0x7) | (area->MPWM_Sub2[1]<<3 & 0x38) | (area->MPWM_Sub2[2]<<6 & 0xC0);
-		out[11] = (area->MPWM_Sub2[2] & 0x1) | (area->MPWM_Sub2[3]<<1 & 0xE) | (area->MPWM_Sub2[4]<<4 & 0x70) | (area->MPWM_Sub2[5]<<7 & 0x80);
-		out[12] = (area->MPWM_Sub2[5] & 0x3) | (area->MPWM_Sub2[6]<<2 & 0x1C) | (area->MPWM_Sub2[7]<<5 & 0xE0);
+		out[11] = (area->MPWM_Sub2[2]>>2 & 0x1) | (area->MPWM_Sub2[3]<<1 & 0xE) | (area->MPWM_Sub2[4]<<4 & 0x70) | (area->MPWM_Sub2[5]<<7 & 0x80);
+		out[12] = (area->MPWM_Sub2[5]>>1 & 0x3) | (area->MPWM_Sub2[6]<<2 & 0x1C) | (area->MPWM_Sub2[7]<<5 & 0xE0);
 		out[13] = area->M_Sub3;
 		out[14] = (area->MPWM_Sub3[0] & 0x7) | (area->MPWM_Sub3[1]<<3 & 0x38) | (area->MPWM_Sub3[2]<<6 & 0xC0);
-		out[15] = (area->MPWM_Sub3[2] & 0x1) | (area->MPWM_Sub3[3]<<1 & 0xE) | (area->MPWM_Sub3[4]<<4 & 0x70) | (area->MPWM_Sub3[5]<<7 & 0x80);
-		out[16] = (area->MPWM_Sub3[5] & 0x3) | (area->MPWM_Sub3[6]<<2 & 0x1C) | (area->MPWM_Sub3[7]<<5 & 0xE0);
+		out[15] = (area->MPWM_Sub3[2]>>2 & 0x1) | (area->MPWM_Sub3[3]<<1 & 0xE) | (area->MPWM_Sub3[4]<<4 & 0x70) | (area->MPWM_Sub3[5]<<7 & 0x80);
+		out[16] = (area->MPWM_Sub3[5]>>1 & 0x3) | (area->MPWM_Sub3[6]<<2 & 0x1C) | (area->MPWM_Sub3[7]<<5 & 0xE0);
 		out[17]	= 0;
 		out[18]	= 0;
 		out[19]	= 0;
@@ -936,13 +941,11 @@ static void *FtThread(FT_HANDLE hFt)
 
 		ret = 0;
 		switch(hFt->type) {
-			case FT_ROBO_IF_USB:
-			case FT_ROBO_IO_EXTENSION:
-			case FT_ROBO_IF_OVER_RF:
-			case FT_ROBO_RF_DATA_LINK:
+			// usb
 			default:
 				ret = usb_interrupt_write(hFt->device, usb_endpoint_write, out, num_write, FT_USB_TIMEOUT);
 				break;
+			// serial
 			case FT_ROBO_IF_COM:
 			case FT_INTELLIGENT_IF:
 			case FT_INTELLIGENT_IF_SLAVE:
@@ -957,13 +960,11 @@ static void *FtThread(FT_HANDLE hFt)
 
 		ret = 0;
 		switch (hFt->type) {
-			case FT_ROBO_IF_USB:
-			case FT_ROBO_IO_EXTENSION:
-			case FT_ROBO_IF_OVER_RF:
-			case FT_ROBO_RF_DATA_LINK:
+			// usb
 			default:
 				ret = usb_interrupt_read(hFt->device, usb_endpoint_read, in, num_read, FT_USB_TIMEOUT);
 				break;
+			// serial
 			case FT_ROBO_IF_COM:
 			case FT_INTELLIGENT_IF:
 			case FT_INTELLIGENT_IF_SLAVE:
@@ -1613,6 +1614,7 @@ long int GetFtFirmware(FT_HANDLE hFt) {
 			break;
 		case FT_ROBO_IF_USB:
 		case FT_ROBO_IO_EXTENSION:
+		case FT_ROBO_LT_CONTROLLER:
 		case FT_ROBO_RF_DATA_LINK:
 			ret = usb_control_msg(hFt->device, 0xc0, 0xf0, 0x1, 0, buffer, 5, FT_USB_TIMEOUT);
 			if (ret < 0) {
@@ -1710,6 +1712,7 @@ long int GetFtSerialNr(FT_HANDLE hFt) {
 			serial = buffer[1] + buffer[2]*100 + buffer[3]*10000 + buffer[4]*1000000;
 			break;
 		case FT_ROBO_IO_EXTENSION:
+		case FT_ROBO_LT_CONTROLLER:
 			ret = usb_control_msg(hFt->device, 0xc0, 0xf0, 0x2, 0, buffer, 14, FT_USB_TIMEOUT);
 			if (ret < 0) {
 				fprintf(stderr, "Error sending control msg 0xC0 0xF0\n");
@@ -2045,6 +2048,7 @@ long int SetRealSerial(FT_HANDLE hFt, unsigned char bOn) {
 			}
 			break;
 		case FT_ROBO_IO_EXTENSION:
+		case FT_ROBO_LT_CONTROLLER:
 			if (bOn) {
 				buffer[8] = 2;
 				buffer[9] = 0x5f;

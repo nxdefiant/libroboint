@@ -1,4 +1,10 @@
-libroboint (0.5.1) UNRELEASED; urgency=low
+libroboint (0.5.2-1) unstable; urgency=low
+
+  * Updated to 0.5.2
+
+ -- Erik Andresen <erik@defiant.homedns.org>  Thu, 04 Jul 2013 10:27:43 +0200
+
+libroboint (0.5.1) unstable; urgency=low
 
   * Updated to 0.5.1
 

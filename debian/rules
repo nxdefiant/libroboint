@@ -63,7 +63,9 @@ install: build
 	cp -ar $(CURDIR)/debian/tmp/usr/bin/* $(CURDIR)/debian/libroboint0/usr/bin/
 	cp -ar $(CURDIR)/debian/tmp/usr/lib/* $(CURDIR)/debian/libroboint0/usr/lib/
 
-	dh_installudev --priority=99
+	#dh_installudev --priority=99
+	mkdir -p $(CURDIR)/debian/libroboint0/lib/udev/rules.d
+	cp -ar $(CURDIR)/udev/fischertechnik.rules $(CURDIR)/debian/libroboint0/lib/udev/rules.d/99-libroboint.rules
 	
 	mkdir -p $(CURDIR)/debian/libroboint-dev/usr/include
 	cp -ar $(CURDIR)/debian/tmp/usr/include/* $(CURDIR)/debian/libroboint-dev/usr/include/

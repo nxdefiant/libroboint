@@ -1,6 +1,6 @@
 README libroboint
 ==========
-libroboint - Open Source version of the fischertechnik ROBO Interface Library for Unix like systems - Version 0.5.1
+libroboint - Open Source version of the fischertechnik ROBO Interface Library for Unix like systems - Version 0.5.2
 
 The goal is to create a library that is fully compatible with the ftlib by knobloch eletronic.
 
@@ -103,6 +103,7 @@ LGPL, see license.txt
 
 Changes:
 <---------->
+0.5.2:	-Added experimental support for Robo LT Controller
 0.5.1:	-Intelligent Interface fixes
 0.5:	-Libft renamed to libroboint to avoid name clashes with other software
 	-C Header file renamed to roboint.h
