@@ -221,8 +221,7 @@
 #define ABF_IF_COMPLETE 0x8b // 0xf2
 #define ABF_IF_COMPLETE_NUM_WRITE 32
 #define ABF_IF_COMPLETE_NUM_READ 42
-#define INTERFACE_QUERY_TIME 10000 // µs == 5ms
-#define INTERFACE_QUERY_TIME_SERIAL 10000
+#define INTERFACE_QUERY_TIME 10000 // µs == 10ms
 #define FT_ENDPOINT_INTERRUPT_IN 0x81
 #define FT_ENDPOINT_INTERRUPT_OUT 0x1
 #define FT_ENDPOINT_BULK_IN 0x82
@@ -587,7 +586,7 @@ FT_HANDLE OpenFtCommDevice(char *sDevice, long int dwTyp, long int dwZyklus)
 	memset(&ret->transfer_area, 0, sizeof(struct _FT_TRANSFER_AREA));
 	ret->transfer_area.TransferAktiv = 0;
 	ret->analogcycle = 2;
-	ret->query_time = INTERFACE_QUERY_TIME_SERIAL;
+	ret->query_time = INTERFACE_QUERY_TIME;
 	ret->transfer_area.RfModulNr = -1;
 	ret->interface_connected = 0;
 
