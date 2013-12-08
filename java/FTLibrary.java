@@ -1,5 +1,6 @@
 import com.sun.jna.*;
 
+
 public interface FTLibrary extends Library {
 	FTLibrary INSTANCE = (FTLibrary)Native.loadLibrary("roboint", FTLibrary.class);
 	

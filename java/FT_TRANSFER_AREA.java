@@ -1,5 +1,8 @@
 import com.sun.jna.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class FT_TRANSFER_AREA extends Structure {
 	public volatile byte E_Main;
 	public volatile byte E_Sub1;
@@ -97,31 +100,106 @@ public class FT_TRANSFER_AREA extends Structure {
 	public volatile byte[] rsvd19 = new byte[2];
 	public volatile NativeLong dwTc;
 	public volatile byte[] rsvd20 = new byte[64];
-	
-	@Override
-	protected List getFieldOrder() {
-		return Arrays.asList(new String[]{
-			"E_Main", "E_Sub1", "E_Sub2", "E_Sub3", "rsvd1",
-			"Distance", "rsvd2", "IRKeys", "res_1", "AX", "AY",
-			"A1", "A2", "AZ", "AV", "D1", "D2", "AXS1", "AXS2",
-			"AXS3", "DS1", "DS2", "ZE", "rsvd3", "Timer1ms",
-			"Timer10ms", "Timer100ms", "Timer1s", "Timer10s",
-			"Timer1min", "res_bF", "res_bT", "resvd4", "M_Main",
-			"M_Sub1", "M_Sub2", "M_Sub3", "rsvd5", "MES_Main",
-			"MES_Sub1", "MES_Sub2", "MES_Sub3", "rsvd6",
-			"reserverd_l1", "reserverd_l2", "reserverd_l3",
-			"MPWM_Main", "MPWM_Sub1", "MPWM_Sub2", "MPWM_Sub3",
-			"rsvd7", "A1S1", "A1S2", "A1S3", "AVS1", "AVS2",
-			"AVS3", "rsvd8", "AX_R", "AY_R", "AXS1_R", "AXS2_R",
-			"AXS3_R", "rsvd10", "Mode", "MPWM_Update",
-			"TransferAktiv", "rsvd11", "BudModules", "SlotModule1",
-			"SlotModule2", "rsvd12", "ChangeEg", "ChangeAn",
-			"ChangeIr", "rsvd13", "E16_Main", "E16_Sub1",
-			"E16_Sub2", "E16_Sub3", "Distance16", "rsvd14",
-			"IRKeys16", "rsvd15", "IRKeys16Code1", "rsvd16",
-			"IRKeys16Code2", "rsvd17", "RfStatus", "RfPower",
-			"RfError", "MsgNumInBuffer", "RfModulNr", "rsvd19",
-			"dwTc", "rsvd20"
-		});
-	}
+
+    @Override
+    protected List getFieldOrder() {
+        return Arrays.asList(
+                "E_Main",
+                "E_Sub1",
+                "E_Sub2",
+                "E_Sub3",
+                "rsvd1",
+                "Distance",
+                "rsvd2",
+                "IRKeys",
+                "res_1",
+                "AX",
+                "AY",
+                "A1",
+                "A2",
+                "AZ",
+                "AV",
+                "D1",
+                "D2",
+                "AXS1",
+                "AXS2",
+                "AXS3",
+                "DS1",
+                "DS2",
+                "ZE",
+                "rsvd3",
+                "Timer1ms",
+                "Timer10ms",
+                "Timer100ms",
+                "Timer1s",
+                "Timer10s",
+                "Timer1min",
+                "res_bF",
+                "res_bT",
+                "resvd4",
+                "M_Main",
+                "M_Sub1",
+                "M_Sub2",
+                "M_Sub3",
+                "rsvd5",
+                "MES_Main",
+                "MES_Sub1",
+                "MES_Sub2",
+                "MES_Sub3",
+                "rsvd6",
+                "reserverd_l1",
+                "reserverd_l2",
+                "reserverd_l3",
+                "MPWM_Main",
+                "MPWM_Sub1",
+                "MPWM_Sub2",
+                "MPWM_Sub3",
+                "rsvd7",
+                "A1S1",
+                "A1S2",
+                "A1S3",
+                "AVS1",
+                "AVS2",
+                "AVS3",
+                "rsvd8",
+                "AX_R",
+                "AY_R",
+                "AXS1_R",
+                "AXS2_R",
+                "AXS3_R",
+                "rsvd10",
+                "Mode",
+                "MPWM_Update",
+                "TransferAktiv",
+                "rsvd11",
+                "BudModules",
+                "SlotModule1",
+                "SlotModule2",
+                "rsvd12",
+                "ChangeEg",
+                "ChangeAn",
+                "ChangeIr",
+                "rsvd13",
+                "E16_Main",
+                "E16_Sub1",
+                "E16_Sub2",
+                "E16_Sub3",
+                "Distance16",
+                "rsvd14",
+                "IRKeys16",
+                "rsvd15",
+                "IRKeys16Code1",
+                "rsvd16",
+                "IRKeys16Code2",
+                "rsvd17",
+                "RfStatus",
+                "RfPower",
+                "RfError",
+                "MsgNumInBuffer",
+                "RfModulNr",
+                "rsvd19",
+                "dwTc",
+                "rsvd20");
+
+    }
 }

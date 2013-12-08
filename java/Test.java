@@ -1,6 +1,6 @@
+import java.lang.*;
 
-
-public class test {
+public class Test {
 
 	/**
 	 * @param args
