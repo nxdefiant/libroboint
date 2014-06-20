@@ -47,10 +47,12 @@
  * Current Version: 0.5.2
  *
  * See http://defiant.homedns.org/~erik/ft/libft/files/ \n
- * Download Latest version: http://defiant.homedns.org/~erik/ft/libft/files/libroboint-current.tar.gz
+ * Download Latest version: http://defiant.homedns.org/~erik/ft/libft/files/libroboint-current.tar.gz \n
+ * Git: https://github.com/nxdefiant/libroboint \n
+ * A <a href="http://ros.org">ROS</a>-Package with basic support of the Navigation Stack is available: https://github.com/nxdefiant/ros_roboint
  *
  * \section req_sec Requirements
- * - libusb - http://libusb.sourceforge.net/
+ * - libusb 0.1 - http://libusb.sourceforge.net/
  * - cmake at least version 2.4 - http://cmake.org
  * - pthreads (Should be included with every modern posix compatible OS)
  *
@@ -814,6 +816,7 @@ static void *FtThread(FT_HANDLE hFt)
 	int timer_fd;
 	struct itimerspec itval;
 	uint64_t missed;
+	unsigned short AV, AVS1, AVS2, AVS3;
 
 	out[0] = ABF_IF_COMPLETE;
 	area->TransferAktiv = 1;
@@ -997,11 +1000,11 @@ static void *FtThread(FT_HANDLE hFt)
 		area->AZ = in[9];
 		area->D1 = in[10];
 		area->D2 = in[11];
-		area->AV = in[12];
+		AV = in[12];
 		area->AZ |= (in[13] & 0x3) << 8;
 		area->D1 |= (in[13] & 0xC) << 6;
 		area->D2 |= (in[13] & 0x30) << 4;
-		area->AV |= (in[13] & 0xC0) << 2;
+		AV |= (in[13] & 0xC0) << 2;
 		area->IRKeys = in[14];
 		area->BusModules = in[15];
 		// 16
@@ -1012,12 +1015,12 @@ static void *FtThread(FT_HANDLE hFt)
 		area->AXS2 |= (in[20] & 0xC) << 6;
 		area->AXS3 |= (in[20] & 0x30) << 4;
 		// 21
-		area->AVS1 = in[22];
-		area->AVS2 = in[23];
-		area->AVS3 = in[24];
-		area->AVS1 |= (in[25] & 0x3) << 8;
-		area->AVS2 |= (in[25] & 0xC) << 6;
-		area->AVS3 |= (in[25] & 0x30) << 4;
+		AVS1 = in[22];
+		AVS2 = in[23];
+		AVS3 = in[24];
+		AVS1 |= (in[25] & 0x3) << 8;
+		AVS2 |= (in[25] & 0xC) << 6;
+		AVS3 |= (in[25] & 0x30) << 4;
 		// 26...42
 		if (hFt->type == FT_INTELLIGENT_IF) {
 			if (i % hFt->analogcycle == 0) { // EX
@@ -1032,6 +1035,11 @@ static void *FtThread(FT_HANDLE hFt)
 				area->AY = in[3] | (in[2]<<8);
 			}
 		}
+		// AV Values
+		area->AV = 8.63*AV-1775;
+		area->AVS1 = 8.63*AVS1-1775;
+		area->AVS2 = 8.63*AVS2-1775;
+		area->AVS3 = 8.63*AVS3-1775;
 		sem_post(&hFt->lock);
 
 		hFt->interface_connected = 1;

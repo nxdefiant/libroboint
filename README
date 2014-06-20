@@ -13,9 +13,16 @@ Running ftuploader --help should give you an idea how to use it.
 Also included is an Interface Diagnose utility. See section Interface Diagnose
 
 
+Download:
+<---------->
+See http://defiant.homedns.org/~erik/ft/libft/files/
+Download Latest version: http://defiant.homedns.org/~erik/ft/libft/files/libroboint-current.tar.gz
+Git: https://github.com/nxdefiant/libroboint
+
+
 Requirements:
 <---------->
-libusb - http://libusb.sourceforge.net/
+libusb 0.1 - http://libusb.sourceforge.net/
 cmake at least version 2.4 - http://cmake.org
 pthreads (Should be included with every modern posix compatible OS)
 
@@ -169,7 +176,7 @@ Changes:
 
 TODO:
 <---------->
--find out what the value from GetAV() does mean
+-Update to libusb 1.0
 -debian: example.c => /usr/share/doc/libroboint-dev/examples/
 -read/write mem? robointerpreter.c, line 1110
 -program dl over serial (check robodummy, line 1340)
