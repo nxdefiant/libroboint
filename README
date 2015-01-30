@@ -111,6 +111,7 @@ LGPL, see license.txt
 Changes:
 <---------->
 0.5.3:	-Added experimental support for Robo Connect Box
+	-Updated java bindings to jna 4.0.0
 0.5.2:	-Added experimental support for Robo LT Controller
 0.5.1:	-Intelligent Interface fixes
 0.5:	-Libft renamed to libroboint to avoid name clashes with other software

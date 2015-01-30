@@ -46,8 +46,7 @@
  * \section dl_sec Download
  * Current Version: 0.5.3
  *
- * See http://defiant.homedns.org/~erik/ft/libft/files/ \n
- * Download Latest version: http://defiant.homedns.org/~erik/ft/libft/files/libroboint-current.tar.gz \n
+ * Download: https://github.com/nxdefiant/libroboint/archive/0.5.3.zip \n
  * Git: https://github.com/nxdefiant/libroboint \n
  * A <a href="http://ros.org">ROS</a>-Package with basic support of the Navigation Stack is available: https://github.com/nxdefiant/ros_roboint
  *
@@ -120,19 +119,27 @@
  *
  *
  * \section changes_sec Changes
- * - 0.5.3:	- Added experimental support for Robo Connect Box
- * - 0.5.2:	- Added experimental support for Robo LT Controller
- * - 0.5.1:	- Intelligent Interface fixes
- * - 0.5.0:	- Libft renamed to libroboint to avoid name clashes with other software 
- *		- C Header file renamed to roboint.h
- * - 0.4.4:	- Some Bug fixes, fixes to work with Fedora 14
- * - 0.4.3:	- Bug fix: Extension digital inputs at RoboRF
- *		- ftdiagnose: Display connection status
- *		- Added functions: (not in Knobloch lib):
- *			- IsFtInterfaceConnected()
- *		- Python added functions:
- *			- IsConnected()
- * - 0.4.2:	- Python support to open the interface by serial
+ * - 0.5.3:
+ *   		- Added experimental support for Robo Connect Box
+ *   		- Updated java bindings to jna 4.0.0
+ * - 0.5.2:
+ *   		- Added experimental support for Robo LT Controller
+ * - 0.5.1:
+ *   		- Intelligent Interface fixes
+ * - 0.5.0:
+ *   		- Libft renamed to libroboint to avoid name clashes with other software
+ *   		- C Header file renamed to roboint.h
+ * - 0.4.4:
+ *   		- Some Bug fixes, fixes to work with Fedora 14
+ * - 0.4.3:
+ *   		- Bug fix: Extension digital inputs at RoboRF
+ *   		- ftdiagnose: Display connection status
+ *   		- Added functions: (not in Knobloch lib):
+ *   			- IsFtInterfaceConnected()
+ *   		- Python added functions:
+ *   			- IsConnected()
+ * - 0.4.2:
+ *		- Python support to open the interface by serial
  *		- Some Bug fixes
  * 		- Added functions: (not in Knobloch lib)
  *	 		- SetRealSerial()
@@ -146,7 +153,7 @@
  * 			- GetFtShortNameStrg()
  * 			- GetFtLongNameStrg()
  * 			- GetFtLibErrorString()
- *	 	- Some minor Bug fixes
+ *   		- Some minor Bug fixes
  * - 0.4:
  *   		- Hopefully support for more then one Robo Interface attached to an RF Link.
  * 			- InitFtUsbDeviceList() will now also count the number of Robo Interfaces attached to an RF Link
