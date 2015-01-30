@@ -221,7 +221,7 @@
 #define EXT_IF_PRODUCT_ID 0x2
 #define RF_DATA_LINK_PRODUCT_ID 0x3
 #define LT_IF_PRODUCT_ID 0xa
-#define ROBO_CONNECT_BOX_ID 0x4
+#define ROBO_CONNECT_BOX_PRODUCT_ID 0x4
 #define ABF_IF_COMPLETE 0x8b // 0xf2
 #define ABF_IF_COMPLETE_NUM_WRITE 32
 #define ABF_IF_COMPLETE_NUM_READ 42
@@ -427,7 +427,7 @@ static int FtproductIDToInterfaceID(int iProductID)
 			return FT_ROBO_RF_DATA_LINK;
 		case LT_IF_PRODUCT_ID:
 			return FT_ROBO_LT_CONTROLLER;
-		case ROBO_CONNECT_BOX_ID:
+		case ROBO_CONNECT_BOX_PRODUCT_ID:
 			return ROBO_CONNECT_BOX;
 	}
 
@@ -447,7 +447,7 @@ static int FtInterfaceIDToProductID(int InterfaceID)
 		case FT_ROBO_LT_CONTROLLER:
 			return LT_IF_PRODUCT_ID;
 		case ROBO_CONNECT_BOX:
-			return ROBO_IF_PRODUCT_ID;
+			return ROBO_CONNECT_BOX_PRODUCT_ID;
 	}
 
 	return 0;
