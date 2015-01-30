@@ -44,7 +44,7 @@
  *  The new ROBO TX Controller is not supported!
  *
  * \section dl_sec Download
- * Current Version: 0.5.2
+ * Current Version: 0.5.3
  *
  * See http://defiant.homedns.org/~erik/ft/libft/files/ \n
  * Download Latest version: http://defiant.homedns.org/~erik/ft/libft/files/libroboint-current.tar.gz \n
@@ -120,6 +120,7 @@
  *
  *
  * \section changes_sec Changes
+ * - 0.5.3:	- Added experimental support for Robo Connect Box
  * - 0.5.2:	- Added experimental support for Robo LT Controller
  * - 0.5.1:	- Intelligent Interface fixes
  * - 0.5.0:	- Libft renamed to libroboint to avoid name clashes with other software 
@@ -220,6 +221,7 @@
 #define EXT_IF_PRODUCT_ID 0x2
 #define RF_DATA_LINK_PRODUCT_ID 0x3
 #define LT_IF_PRODUCT_ID 0xa
+#define ROBO_CONNECT_BOX_ID 0x4
 #define ABF_IF_COMPLETE 0x8b // 0xf2
 #define ABF_IF_COMPLETE_NUM_WRITE 32
 #define ABF_IF_COMPLETE_NUM_READ 42
@@ -425,6 +427,8 @@ static int FtproductIDToInterfaceID(int iProductID)
 			return FT_ROBO_RF_DATA_LINK;
 		case LT_IF_PRODUCT_ID:
 			return FT_ROBO_LT_CONTROLLER;
+		case ROBO_CONNECT_BOX_ID:
+			return ROBO_CONNECT_BOX;
 	}
 
 	return 0;
@@ -442,6 +446,8 @@ static int FtInterfaceIDToProductID(int InterfaceID)
 			return RF_DATA_LINK_PRODUCT_ID;
 		case FT_ROBO_LT_CONTROLLER:
 			return LT_IF_PRODUCT_ID;
+		case ROBO_CONNECT_BOX:
+			return ROBO_IF_PRODUCT_ID;
 	}
 
 	return 0;
@@ -684,6 +690,9 @@ long int GetFtDeviceTypeString(FT_HANDLE hFt, char *dest, int len)
 		case FT_ROBO_LT_CONTROLLER:
 			strncpy(dest, "Robo LT Controller", len);
 			break;
+		case ROBO_CONNECT_BOX:
+			strncpy(dest, "Robo Connect Box", len);
+			break;
 		default:
 			strncpy(dest, "Unknown", len);
 	}
@@ -824,6 +833,7 @@ static void *FtThread(FT_HANDLE hFt)
 	switch(hFt->type) {
 		case FT_ROBO_IF_USB: // old firmware can not handle the new command, so stick with the old for now
 		case FT_ROBO_IF_COM:
+		case ROBO_CONNECT_BOX:
 			out[0] = 0xf2;
 			num_write = 17;
 			num_read = 21;

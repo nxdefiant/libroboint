@@ -208,6 +208,7 @@ class RoboInterface:
 	FT_ROBO_IO_EXTENSION        =  90
 	FT_ROBO_LT_CONTROLLER       =  91
 	FT_ROBO_RF_DATA_LINK	    = 110
+	ROBO_CONNECT_BOX	    = 200
 
 	# Distance Input settings
 	kTolerance = (20, 20)
