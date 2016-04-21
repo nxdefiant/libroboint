@@ -533,6 +533,13 @@ class RoboInterface:
 			return self.transfer_area.D2
 		return 0
 
+	def av_to_v(self, av):
+		"""Converts analog value 0..1023 in voltage
+		"""
+		if self.GetDeviceType() in [self.FT_ROBO_IO_EXTENSION, self.FT_ROBO_LT_CONTROLLER]:
+			return 0.03*av
+
+		return 8.63*av-1775
 	
 	def GetAV(self):
 		"""Get the value of AV (power supply)
@@ -540,7 +547,7 @@ class RoboInterface:
 		Will return a number between 0 and 1024
 		"""
 		if self.transfer_area:
-			return self.transfer_area.AV
+			return self.av_to_v(self.transfer_area.AV)
 		return 0
 	
 	
@@ -550,7 +557,7 @@ class RoboInterface:
 		Will return a number between 0 and 1024
 		"""
 		if self.transfer_area:
-			return self.transfer_area.AVS1
+			return self.av_to_v(self.transfer_area.AVS1)
 		return 0
 
 
@@ -560,7 +567,7 @@ class RoboInterface:
 		Will return a number between 0 and 1024
 		"""
 		if self.transfer_area:
-			return self.transfer_area.AVS2
+			return self.av_to_v(self.transfer_area.AVS2)
 		return 0
 
 
@@ -570,7 +577,7 @@ class RoboInterface:
 		Will return a number between 0 and 1024
 		"""
 		if self.transfer_area:
-			return self.transfer_area.AVS3
+			return self.av_to_v(self.transfer_area.AVS3)
 		return 0
 
 	

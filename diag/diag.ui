@@ -1,10 +1,11 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>diag</class>
- <widget class="QMainWindow" name="diag" >
-  <property name="enabled" >
+ <widget class="QMainWindow" name="diag">
+  <property name="enabled">
    <bool>true</bool>
   </property>
-  <property name="geometry" >
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -12,39 +13,39 @@
     <height>620</height>
    </rect>
   </property>
-  <property name="sizePolicy" >
-   <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
-  <property name="minimumSize" >
+  <property name="minimumSize">
    <size>
     <width>580</width>
     <height>620</height>
    </size>
   </property>
-  <property name="maximumSize" >
+  <property name="maximumSize">
    <size>
     <width>580</width>
     <height>620</height>
    </size>
   </property>
-  <property name="palette" >
+  <property name="palette">
    <palette>
     <active>
-     <colorrole role="Highlight" >
-      <brush brushstyle="SolidPattern" >
-       <color alpha="255" >
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
         <red>47</red>
         <green>212</green>
         <blue>29</blue>
        </color>
       </brush>
      </colorrole>
-     <colorrole role="Link" >
-      <brush brushstyle="SolidPattern" >
-       <color alpha="255" >
+     <colorrole role="Link">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
         <red>0</red>
         <green>255</green>
         <blue>0</blue>
@@ -53,18 +54,18 @@
      </colorrole>
     </active>
     <inactive>
-     <colorrole role="Highlight" >
-      <brush brushstyle="SolidPattern" >
-       <color alpha="255" >
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
         <red>47</red>
         <green>212</green>
         <blue>29</blue>
        </color>
       </brush>
      </colorrole>
-     <colorrole role="Link" >
-      <brush brushstyle="SolidPattern" >
-       <color alpha="255" >
+     <colorrole role="Link">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
         <red>0</red>
         <green>255</green>
         <blue>0</blue>
@@ -73,18 +74,18 @@
      </colorrole>
     </inactive>
     <disabled>
-     <colorrole role="Highlight" >
-      <brush brushstyle="SolidPattern" >
-       <color alpha="255" >
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
         <red>214</red>
         <green>213</green>
         <blue>211</blue>
        </color>
       </brush>
      </colorrole>
-     <colorrole role="Link" >
-      <brush brushstyle="SolidPattern" >
-       <color alpha="255" >
+     <colorrole role="Link">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
         <red>0</red>
         <green>255</green>
         <blue>0</blue>
@@ -94,21 +95,21 @@
     </disabled>
    </palette>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Diagnose ft Interface</string>
   </property>
-  <property name="animated" >
+  <property name="animated">
    <bool>true</bool>
   </property>
-  <property name="dockNestingEnabled" >
+  <property name="dockNestingEnabled">
    <bool>false</bool>
   </property>
-  <widget class="QWidget" name="centralwidget" >
-   <widget class="QTabWidget" name="tabWidget" >
-    <property name="enabled" >
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="enabled">
      <bool>false</bool>
     </property>
-    <property name="geometry" >
+    <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
@@ -116,21 +117,21 @@
       <height>581</height>
      </rect>
     </property>
-    <property name="sizePolicy" >
-     <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
-    <property name="currentIndex" >
+    <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="tab_main" >
-     <attribute name="title" >
+    <widget class="QWidget" name="tab_main">
+     <attribute name="title">
       <string>Main</string>
      </attribute>
-     <widget class="QFrame" name="frame" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
@@ -138,14 +139,14 @@
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_MainBoth_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainBoth_1">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -153,33 +154,33 @@
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 1</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_MainLeft_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainLeft_1">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -187,33 +188,33 @@
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 1</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_MainRight_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainRight_1">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -221,34 +222,34 @@
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 2</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_2" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
        <rect>
         <x>150</x>
         <y>10</y>
@@ -256,14 +257,14 @@
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_MainBoth_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainBoth_2">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -271,33 +272,33 @@
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 2</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_MainLeft_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainLeft_2">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -305,33 +306,33 @@
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 3</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_MainRight_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainRight_2">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -339,34 +340,34 @@
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 4</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_3" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
        <rect>
         <x>290</x>
         <y>10</y>
@@ -374,14 +375,14 @@
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_MainBoth_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainBoth_3">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -389,33 +390,33 @@
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 3</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_MainLeft_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainLeft_3">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -423,33 +424,33 @@
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 5</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_MainRight_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainRight_3">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -457,34 +458,34 @@
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 6</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_4" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
        <rect>
         <x>430</x>
         <y>10</y>
@@ -492,14 +493,14 @@
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_MainBoth_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainBoth_4">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -507,33 +508,33 @@
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 4</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_MainLeft_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainLeft_4">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -541,33 +542,33 @@
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 7</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_MainRight_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_MainRight_4">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -575,34 +576,34 @@
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 8</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="verticalLayout" >
-      <property name="geometry" >
+     <widget class="QWidget" name="verticalLayout">
+      <property name="geometry">
        <rect>
         <x>10</x>
         <y>210</y>
@@ -610,142 +611,142 @@
         <height>284</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" >
+      <layout class="QVBoxLayout">
        <item>
-        <widget class="QRadioButton" name="radioButton_MainDigital_1" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_MainDigital_1">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 1</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="checked" >
+         <property name="checked">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_MainDigital_2" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_MainDigital_2">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 2</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_MainDigital_3" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_MainDigital_3">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 3</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_MainDigital_4" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_MainDigital_4">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 4</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_MainDigital_5" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_MainDigital_5">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 5</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_MainDigital_6" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_MainDigital_6">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 6</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_MainDigital_7" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_MainDigital_7">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 7</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_MainDigital_8" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_MainDigital_8">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 8</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QProgressBar" name="progressBar_Voltage" >
-      <property name="geometry" >
+     <widget class="QProgressBar" name="progressBar_Voltage">
+      <property name="geometry">
        <rect>
         <x>400</x>
         <y>280</y>
@@ -753,24 +754,24 @@
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
-       <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">AV&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;AV&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
-      <property name="maximum" >
-       <number>1024</number>
+      <property name="maximum">
+       <number>12</number>
       </property>
-      <property name="value" >
+      <property name="value">
        <number>0</number>
       </property>
-      <property name="format" >
+      <property name="format">
        <string>%v</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_AX" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_AX">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>210</y>
@@ -778,12 +779,12 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="palette" >
+      <property name="palette">
        <palette>
         <active>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>20</red>
             <green>19</green>
             <blue>18</blue>
@@ -792,9 +793,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </active>
         <inactive>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>20</red>
             <green>19</green>
             <blue>18</blue>
@@ -803,9 +804,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </inactive>
         <disabled>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
@@ -815,27 +816,27 @@ p, li { white-space: pre-wrap; }
         </disabled>
        </palette>
       </property>
-      <property name="font" >
+      <property name="font">
        <font>
         <weight>50</weight>
         <bold>false</bold>
        </font>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>AX</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_AY" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_AY">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>210</y>
@@ -843,21 +844,21 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>AY</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_A1" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_A1">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>280</y>
@@ -865,21 +866,21 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>A1</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_A2" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_A2">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>280</y>
@@ -887,21 +888,21 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>A2</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_AZ" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_AZ">
+      <property name="geometry">
        <rect>
         <x>400</x>
         <y>210</y>
@@ -909,21 +910,21 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>AZ</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_IR" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_IR">
+      <property name="geometry">
        <rect>
         <x>210</x>
         <y>460</y>
@@ -931,21 +932,21 @@ p, li { white-space: pre-wrap; }
         <height>41</height>
        </rect>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>IR</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLabel" name="label" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label">
+      <property name="geometry">
        <rect>
         <x>210</x>
         <y>500</y>
@@ -953,12 +954,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>IR</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>240</y>
@@ -966,12 +967,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AX</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>240</y>
@@ -979,12 +980,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AY</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_4" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
        <rect>
         <x>400</x>
         <y>240</y>
@@ -992,12 +993,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AZ</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_5" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>310</y>
@@ -1005,12 +1006,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>A1</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_6" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>310</y>
@@ -1018,12 +1019,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>A2</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_7" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
        <rect>
         <x>400</x>
         <y>310</y>
@@ -1031,12 +1032,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AV</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_8" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
        <rect>
         <x>60</x>
         <y>190</y>
@@ -1044,12 +1045,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 1</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_9" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
        <rect>
         <x>190</x>
         <y>190</y>
@@ -1057,12 +1058,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 2</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_10" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
        <rect>
         <x>330</x>
         <y>190</y>
@@ -1070,12 +1071,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 3</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_11" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
        <rect>
         <x>470</x>
         <y>190</y>
@@ -1083,12 +1084,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 4</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_Stop" >
-      <property name="geometry" >
+     <widget class="QPushButton" name="pushButton_Stop">
+      <property name="geometry">
        <rect>
         <x>420</x>
         <y>410</y>
@@ -1096,12 +1097,12 @@ p, li { white-space: pre-wrap; }
         <height>51</height>
        </rect>
       </property>
-      <property name="palette" >
+      <property name="palette">
        <palette>
         <active>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>255</red>
             <green>0</green>
             <blue>0</blue>
@@ -1110,9 +1111,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </active>
         <inactive>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>255</red>
             <green>0</green>
             <blue>0</blue>
@@ -1121,9 +1122,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </inactive>
         <disabled>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>151</red>
             <green>150</green>
             <blue>149</blue>
@@ -1133,19 +1134,19 @@ p, li { white-space: pre-wrap; }
         </disabled>
        </palette>
       </property>
-      <property name="font" >
+      <property name="font">
        <font>
         <pointsize>14</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>STOP</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_D1" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_D1">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>350</y>
@@ -1153,21 +1154,21 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>A1</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_D2" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_D2">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>350</y>
@@ -1175,21 +1176,21 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>A1</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLabel" name="label_27" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>380</y>
@@ -1197,12 +1198,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>D1</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_28" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>380</y>
@@ -1210,12 +1211,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>D2</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBoxConnection_Main" >
-      <property name="geometry" >
+     <widget class="QCheckBox" name="checkBoxConnection_Main">
+      <property name="geometry">
        <rect>
         <x>400</x>
         <y>350</y>
@@ -1223,17 +1224,17 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Connection</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_slave1" >
-     <attribute name="title" >
+    <widget class="QWidget" name="tab_slave1">
+     <attribute name="title">
       <string>Slave 1</string>
      </attribute>
-     <widget class="QFrame" name="frame_5" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_5">
+      <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
@@ -1241,14 +1242,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave1Both_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Both_1">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -1256,33 +1257,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 1</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave1Left_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Left_1">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -1290,33 +1291,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 1</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave1Right_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Right_1">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -1324,34 +1325,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 2</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_6" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_6">
+      <property name="geometry">
        <rect>
         <x>150</x>
         <y>10</y>
@@ -1359,14 +1360,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave1Both_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Both_2">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -1374,33 +1375,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 2</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave1Left_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Left_2">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -1408,33 +1409,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 3</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave1Right_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Right_2">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -1442,34 +1443,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 4</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_7" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_7">
+      <property name="geometry">
        <rect>
         <x>290</x>
         <y>10</y>
@@ -1477,14 +1478,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave1Both_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Both_3">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -1492,33 +1493,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 3</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave1Left_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Left_3">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -1526,33 +1527,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 5</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave1Right_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Right_3">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -1560,34 +1561,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 6</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_8" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_8">
+      <property name="geometry">
        <rect>
         <x>430</x>
         <y>10</y>
@@ -1595,14 +1596,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave1Both_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Both_4">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -1610,33 +1611,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 4</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave1Left_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Left_4">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -1644,33 +1645,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 7</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave1Right_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave1Right_4">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -1678,34 +1679,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 8</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="verticalLayout_2" >
-      <property name="geometry" >
+     <widget class="QWidget" name="verticalLayout_2">
+      <property name="geometry">
        <rect>
         <x>10</x>
         <y>210</y>
@@ -1713,134 +1714,134 @@ p, li { white-space: pre-wrap; }
         <height>284</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="_3" >
+      <layout class="QVBoxLayout" name="_3">
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave1Digital_1" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave1Digital_1">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 1</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="checked" >
+         <property name="checked">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave1Digital_2" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave1Digital_2">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 2</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave1Digital_3" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave1Digital_3">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 3</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave1Digital_4" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave1Digital_4">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 4</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave1Digital_5" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave1Digital_5">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 5</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave1Digital_6" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave1Digital_6">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 6</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave1Digital_7" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave1Digital_7">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 7</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave1Digital_8" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave1Digital_8">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 8</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
@@ -1855,8 +1856,8 @@ p, li { white-space: pre-wrap; }
       <zorder>radioButton_Slave1Digital_8</zorder>
       <zorder>radioButton_Slave1Digital_3</zorder>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_AX_Slave1" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_AX_Slave1">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>210</y>
@@ -1864,12 +1865,12 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="palette" >
+      <property name="palette">
        <palette>
         <active>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>20</red>
             <green>19</green>
             <blue>18</blue>
@@ -1878,9 +1879,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </active>
         <inactive>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>20</red>
             <green>19</green>
             <blue>18</blue>
@@ -1889,9 +1890,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </inactive>
         <disabled>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
@@ -1901,27 +1902,27 @@ p, li { white-space: pre-wrap; }
         </disabled>
        </palette>
       </property>
-      <property name="font" >
+      <property name="font">
        <font>
         <weight>50</weight>
         <bold>false</bold>
        </font>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>AX</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLabel" name="label_12" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>240</y>
@@ -1929,12 +1930,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AX</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_Stop_2" >
-      <property name="geometry" >
+     <widget class="QPushButton" name="pushButton_Stop_2">
+      <property name="geometry">
        <rect>
         <x>420</x>
         <y>410</y>
@@ -1942,12 +1943,12 @@ p, li { white-space: pre-wrap; }
         <height>51</height>
        </rect>
       </property>
-      <property name="palette" >
+      <property name="palette">
        <palette>
         <active>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>255</red>
             <green>0</green>
             <blue>0</blue>
@@ -1956,9 +1957,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </active>
         <inactive>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>255</red>
             <green>0</green>
             <blue>0</blue>
@@ -1967,9 +1968,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </inactive>
         <disabled>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>151</red>
             <green>150</green>
             <blue>149</blue>
@@ -1979,19 +1980,19 @@ p, li { white-space: pre-wrap; }
         </disabled>
        </palette>
       </property>
-      <property name="font" >
+      <property name="font">
        <font>
         <pointsize>14</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>STOP</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_13" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
        <rect>
         <x>60</x>
         <y>190</y>
@@ -1999,12 +2000,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 1</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_14" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
        <rect>
         <x>190</x>
         <y>190</y>
@@ -2012,12 +2013,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 2</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_15" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
        <rect>
         <x>330</x>
         <y>190</y>
@@ -2025,12 +2026,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 3</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_16" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
        <rect>
         <x>470</x>
         <y>190</y>
@@ -2038,12 +2039,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 4</string>
       </property>
      </widget>
-     <widget class="QProgressBar" name="progressBar_Voltage_Slave1" >
-      <property name="geometry" >
+     <widget class="QProgressBar" name="progressBar_Voltage_Slave1">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>210</y>
@@ -2051,24 +2052,24 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
-       <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">AV&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;AV&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
-      <property name="maximum" >
-       <number>1024</number>
+      <property name="maximum">
+       <number>12</number>
       </property>
-      <property name="value" >
+      <property name="value">
        <number>0</number>
       </property>
-      <property name="format" >
+      <property name="format">
        <string>%v</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_29" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>240</y>
@@ -2076,12 +2077,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AV</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBoxConnection_Slave1" >
-      <property name="geometry" >
+     <widget class="QCheckBox" name="checkBoxConnection_Slave1">
+      <property name="geometry">
        <rect>
         <x>400</x>
         <y>350</y>
@@ -2089,17 +2090,17 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Connection</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_slave2" >
-     <attribute name="title" >
+    <widget class="QWidget" name="tab_slave2">
+     <attribute name="title">
       <string>Slave 2</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton_Stop_3" >
-      <property name="geometry" >
+     <widget class="QPushButton" name="pushButton_Stop_3">
+      <property name="geometry">
        <rect>
         <x>420</x>
         <y>410</y>
@@ -2107,12 +2108,12 @@ p, li { white-space: pre-wrap; }
         <height>51</height>
        </rect>
       </property>
-      <property name="palette" >
+      <property name="palette">
        <palette>
         <active>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>255</red>
             <green>0</green>
             <blue>0</blue>
@@ -2121,9 +2122,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </active>
         <inactive>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>255</red>
             <green>0</green>
             <blue>0</blue>
@@ -2132,9 +2133,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </inactive>
         <disabled>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>151</red>
             <green>150</green>
             <blue>149</blue>
@@ -2144,19 +2145,19 @@ p, li { white-space: pre-wrap; }
         </disabled>
        </palette>
       </property>
-      <property name="font" >
+      <property name="font">
        <font>
         <pointsize>14</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>STOP</string>
       </property>
      </widget>
-     <widget class="QFrame" name="frame_9" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_9">
+      <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
@@ -2164,14 +2165,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave2Both_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Both_1">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -2179,33 +2180,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 1</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave2Left_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Left_1">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -2213,33 +2214,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 1</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave2Right_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Right_1">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -2247,34 +2248,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 2</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_10" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_10">
+      <property name="geometry">
        <rect>
         <x>150</x>
         <y>10</y>
@@ -2282,14 +2283,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave2Both_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Both_2">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -2297,33 +2298,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 2</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave2Left_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Left_2">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -2331,33 +2332,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 3</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave2Right_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Right_2">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -2365,34 +2366,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 4</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_11" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_11">
+      <property name="geometry">
        <rect>
         <x>290</x>
         <y>10</y>
@@ -2400,14 +2401,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave2Both_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Both_3">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -2415,33 +2416,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 3</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave2Left_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Left_3">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -2449,33 +2450,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 5</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave2Right_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Right_3">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -2483,34 +2484,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 6</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_12" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_12">
+      <property name="geometry">
        <rect>
         <x>430</x>
         <y>10</y>
@@ -2518,14 +2519,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave2Both_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Both_4">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -2533,33 +2534,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 4</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave2Left_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Left_4">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -2567,33 +2568,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 7</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave2Right_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave2Right_4">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -2601,34 +2602,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 8</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="verticalLayout_3" >
-      <property name="geometry" >
+     <widget class="QWidget" name="verticalLayout_3">
+      <property name="geometry">
        <rect>
         <x>10</x>
         <y>210</y>
@@ -2636,142 +2637,142 @@ p, li { white-space: pre-wrap; }
         <height>284</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="_4" >
+      <layout class="QVBoxLayout" name="_4">
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave2Digital_1" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave2Digital_1">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 1</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="checked" >
+         <property name="checked">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave2Digital_2" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave2Digital_2">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 2</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave2Digital_3" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave2Digital_3">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 3</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave2Digital_4" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave2Digital_4">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 4</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave2Digital_5" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave2Digital_5">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 5</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave2Digital_6" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave2Digital_6">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 6</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave2Digital_7" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave2Digital_7">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 7</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave2Digital_8" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave2Digital_8">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 8</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_AX_Slave2" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_AX_Slave2">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>210</y>
@@ -2779,12 +2780,12 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="palette" >
+      <property name="palette">
        <palette>
         <active>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>20</red>
             <green>19</green>
             <blue>18</blue>
@@ -2793,9 +2794,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </active>
         <inactive>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>20</red>
             <green>19</green>
             <blue>18</blue>
@@ -2804,9 +2805,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </inactive>
         <disabled>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
@@ -2816,27 +2817,27 @@ p, li { white-space: pre-wrap; }
         </disabled>
        </palette>
       </property>
-      <property name="font" >
+      <property name="font">
        <font>
         <weight>50</weight>
         <bold>false</bold>
        </font>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>AX</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLabel" name="label_17" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>240</y>
@@ -2844,12 +2845,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AX</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_18" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
        <rect>
         <x>60</x>
         <y>190</y>
@@ -2857,12 +2858,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 1</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_19" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
        <rect>
         <x>190</x>
         <y>190</y>
@@ -2870,12 +2871,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 2</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_20" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
        <rect>
         <x>330</x>
         <y>190</y>
@@ -2883,12 +2884,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 3</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_21" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
        <rect>
         <x>470</x>
         <y>190</y>
@@ -2896,12 +2897,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 4</string>
       </property>
      </widget>
-     <widget class="QProgressBar" name="progressBar_Voltage_Slave2" >
-      <property name="geometry" >
+     <widget class="QProgressBar" name="progressBar_Voltage_Slave2">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>210</y>
@@ -2909,24 +2910,24 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
-       <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">AV&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;AV&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
-      <property name="maximum" >
-       <number>1024</number>
+      <property name="maximum">
+       <number>12</number>
       </property>
-      <property name="value" >
+      <property name="value">
        <number>0</number>
       </property>
-      <property name="format" >
+      <property name="format">
        <string>%v</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_30" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>240</y>
@@ -2934,12 +2935,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AV</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBoxConnection_Slave2" >
-      <property name="geometry" >
+     <widget class="QCheckBox" name="checkBoxConnection_Slave2">
+      <property name="geometry">
        <rect>
         <x>400</x>
         <y>350</y>
@@ -2947,17 +2948,17 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Connection</string>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_slave3" >
-     <attribute name="title" >
+    <widget class="QWidget" name="tab_slave3">
+     <attribute name="title">
       <string>Slave 3</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton_Stop_4" >
-      <property name="geometry" >
+     <widget class="QPushButton" name="pushButton_Stop_4">
+      <property name="geometry">
        <rect>
         <x>420</x>
         <y>410</y>
@@ -2965,12 +2966,12 @@ p, li { white-space: pre-wrap; }
         <height>51</height>
        </rect>
       </property>
-      <property name="palette" >
+      <property name="palette">
        <palette>
         <active>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>255</red>
             <green>0</green>
             <blue>0</blue>
@@ -2979,9 +2980,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </active>
         <inactive>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>255</red>
             <green>0</green>
             <blue>0</blue>
@@ -2990,9 +2991,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </inactive>
         <disabled>
-         <colorrole role="ButtonText" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>151</red>
             <green>150</green>
             <blue>149</blue>
@@ -3002,19 +3003,19 @@ p, li { white-space: pre-wrap; }
         </disabled>
        </palette>
       </property>
-      <property name="font" >
+      <property name="font">
        <font>
         <pointsize>14</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>STOP</string>
       </property>
      </widget>
-     <widget class="QFrame" name="frame_13" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_13">
+      <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
@@ -3022,14 +3023,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave3Both_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Both_1">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -3037,33 +3038,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 1</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave3Left_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Left_1">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -3071,33 +3072,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 1</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave3Right_1" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Right_1">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -3105,34 +3106,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 2</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_14" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_14">
+      <property name="geometry">
        <rect>
         <x>150</x>
         <y>10</y>
@@ -3140,14 +3141,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave3Both_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Both_2">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -3155,33 +3156,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 2</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave3Left_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Left_2">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -3189,33 +3190,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 3</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave3Right_2" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Right_2">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -3223,34 +3224,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 4</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_15" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_15">
+      <property name="geometry">
        <rect>
         <x>290</x>
         <y>10</y>
@@ -3258,14 +3259,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave3Both_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Both_3">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -3273,33 +3274,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 3</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave3Left_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Left_3">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -3307,33 +3308,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 5</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave3Right_3" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Right_3">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -3341,34 +3342,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 6</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_16" >
-      <property name="geometry" >
+     <widget class="QFrame" name="frame_16">
+      <property name="geometry">
        <rect>
         <x>430</x>
         <y>10</y>
@@ -3376,14 +3377,14 @@ p, li { white-space: pre-wrap; }
         <height>181</height>
        </rect>
       </property>
-      <property name="frameShape" >
+      <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="frameShadow" >
+      <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QDial" name="dial_Slave3Both_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Both_4">
+       <property name="geometry">
         <rect>
          <x>20</x>
          <y>10</y>
@@ -3391,33 +3392,33 @@ p, li { white-space: pre-wrap; }
          <height>100</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Motor 4</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>-7</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave3Left_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Left_4">
+       <property name="geometry">
         <rect>
          <x>10</x>
          <y>120</y>
@@ -3425,33 +3426,33 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 7</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDial" name="dial_Slave3Right_4" >
-       <property name="geometry" >
+      <widget class="QDial" name="dial_Slave3Right_4">
+       <property name="geometry">
         <rect>
          <x>80</x>
          <y>120</y>
@@ -3459,34 +3460,34 @@ p, li { white-space: pre-wrap; }
          <height>50</height>
         </rect>
        </property>
-       <property name="cursor" >
+       <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="focusPolicy" >
+       <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
-       <property name="toolTip" >
+       <property name="toolTip">
         <string>Output 8</string>
        </property>
-       <property name="minimum" >
+       <property name="minimum">
         <number>0</number>
        </property>
-       <property name="maximum" >
+       <property name="maximum">
         <number>7</number>
        </property>
-       <property name="pageStep" >
+       <property name="pageStep">
         <number>8</number>
        </property>
-       <property name="wrapping" >
+       <property name="wrapping">
         <bool>false</bool>
        </property>
-       <property name="notchesVisible" >
+       <property name="notchesVisible">
         <bool>true</bool>
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="verticalLayout_4" >
-      <property name="geometry" >
+     <widget class="QWidget" name="verticalLayout_4">
+      <property name="geometry">
        <rect>
         <x>10</x>
         <y>210</y>
@@ -3494,142 +3495,142 @@ p, li { white-space: pre-wrap; }
         <height>284</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="_6" >
+      <layout class="QVBoxLayout" name="_6">
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave3Digital_1" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave3Digital_1">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 1</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="checked" >
+         <property name="checked">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave3Digital_2" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave3Digital_2">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 2</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave3Digital_3" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave3Digital_3">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 3</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave3Digital_4" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave3Digital_4">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 4</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave3Digital_5" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave3Digital_5">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 5</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave3Digital_6" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave3Digital_6">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 6</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave3Digital_7" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave3Digital_7">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 7</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButton_Slave3Digital_8" >
-         <property name="focusPolicy" >
+        <widget class="QRadioButton" name="radioButton_Slave3Digital_8">
+         <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
-         <property name="text" >
+         <property name="text">
           <string>Input 8</string>
          </property>
-         <property name="checkable" >
+         <property name="checkable">
           <bool>false</bool>
          </property>
-         <property name="autoExclusive" >
+         <property name="autoExclusive">
           <bool>false</bool>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QLCDNumber" name="lcdNumber_AX_Slave3" >
-      <property name="geometry" >
+     <widget class="QLCDNumber" name="lcdNumber_AX_Slave3">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>210</y>
@@ -3637,12 +3638,12 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="palette" >
+      <property name="palette">
        <palette>
         <active>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>20</red>
             <green>19</green>
             <blue>18</blue>
@@ -3651,9 +3652,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </active>
         <inactive>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>20</red>
             <green>19</green>
             <blue>18</blue>
@@ -3662,9 +3663,9 @@ p, li { white-space: pre-wrap; }
          </colorrole>
         </inactive>
         <disabled>
-         <colorrole role="Text" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
             <red>0</red>
             <green>0</green>
             <blue>0</blue>
@@ -3674,27 +3675,27 @@ p, li { white-space: pre-wrap; }
         </disabled>
        </palette>
       </property>
-      <property name="font" >
+      <property name="font">
        <font>
         <weight>50</weight>
         <bold>false</bold>
        </font>
       </property>
-      <property name="toolTip" >
+      <property name="toolTip">
        <string>AX</string>
       </property>
-      <property name="numDigits" >
+      <property name="numDigits">
        <number>4</number>
       </property>
-      <property name="value" stdset="0" >
+      <property name="value" stdset="0">
        <double>0.000000000000000</double>
       </property>
-      <property name="intValue" stdset="0" >
+      <property name="intValue" stdset="0">
        <number>0</number>
       </property>
      </widget>
-     <widget class="QLabel" name="label_22" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
        <rect>
         <x>200</x>
         <y>240</y>
@@ -3702,12 +3703,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AX</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_23" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
        <rect>
         <x>60</x>
         <y>190</y>
@@ -3715,12 +3716,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 1</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_24" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
        <rect>
         <x>190</x>
         <y>190</y>
@@ -3728,12 +3729,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 2</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_25" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
        <rect>
         <x>330</x>
         <y>190</y>
@@ -3741,12 +3742,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 3</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_26" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
        <rect>
         <x>470</x>
         <y>190</y>
@@ -3754,12 +3755,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Motor 4</string>
       </property>
      </widget>
-     <widget class="QProgressBar" name="progressBar_Voltage_Slave3" >
-      <property name="geometry" >
+     <widget class="QProgressBar" name="progressBar_Voltage_Slave3">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>210</y>
@@ -3767,24 +3768,24 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="toolTip" >
-       <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">AV&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;AV&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
-      <property name="maximum" >
-       <number>1024</number>
+      <property name="maximum">
+       <number>12</number>
       </property>
-      <property name="value" >
-       <number>0</number>
+      <property name="value">
+       <number>1</number>
       </property>
-      <property name="format" >
+      <property name="format">
        <string>%v</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_31" >
-      <property name="geometry" >
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
        <rect>
         <x>300</x>
         <y>240</y>
@@ -3792,12 +3793,12 @@ p, li { white-space: pre-wrap; }
         <height>18</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>AV</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBoxConnection_Slave3" >
-      <property name="geometry" >
+     <widget class="QCheckBox" name="checkBoxConnection_Slave3">
+      <property name="geometry">
        <rect>
         <x>400</x>
         <y>350</y>
@@ -3805,46 +3806,46 @@ p, li { white-space: pre-wrap; }
         <height>23</height>
        </rect>
       </property>
-      <property name="text" >
+      <property name="text">
        <string>Connection</string>
       </property>
      </widget>
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar" >
-   <property name="geometry" >
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>580</width>
-     <height>26</height>
+     <height>19</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuFile" >
-    <property name="title" >
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionOpen" />
-    <addaction name="actionClose_Interface" />
-    <addaction name="separator" />
-    <addaction name="actionClose" />
+    <addaction name="actionOpen"/>
+    <addaction name="actionClose_Interface"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
    </widget>
-   <addaction name="menuFile" />
+   <addaction name="menuFile"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar" />
-  <action name="actionOpen" >
-   <property name="text" >
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
     <string>Open Interface</string>
    </property>
   </action>
-  <action name="actionClose" >
-   <property name="text" >
+  <action name="actionClose">
+   <property name="text">
     <string>Close Window</string>
    </property>
   </action>
-  <action name="actionClose_Interface" >
-   <property name="text" >
+  <action name="actionClose_Interface">
+   <property name="text">
     <string>Close Interface</string>
    </property>
   </action>
@@ -3857,11 +3858,11 @@ p, li { white-space: pre-wrap; }
    <receiver>diag</receiver>
    <slot>close()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>-1</x>
      <y>-1</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>399</x>
      <y>299</y>
     </hint>

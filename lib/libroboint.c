@@ -1063,14 +1063,10 @@ static void *FtThread(FT_HANDLE hFt)
 			}
 		}
 		// AV Values
-		if (num_read == 6) { // FT_ROBO_IO_EXTENSION/FT_ROBO_LT_CONTROLLER
-			area->AV = 3.1267*AV-51.068;
-		} else {
-			area->AV = 8.63*AV-1775;
-			area->AVS1 = 8.63*AVS1-1775;
-			area->AVS2 = 8.63*AVS2-1775;
-			area->AVS3 = 8.63*AVS3-1775;
-		}
+		area->AV = AV;
+		area->AVS1 = AVS1;
+		area->AVS2 = AVS2;
+		area->AVS3 = AVS3;
 		sem_post(&hFt->lock);
 
 		hFt->interface_connected = 1;
