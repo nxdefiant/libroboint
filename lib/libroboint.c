@@ -216,6 +216,7 @@
 #include <termios.h>
 #include <fcntl.h>
 #include <usb.h>
+#include <sys/timerfd.h>
 #include "crc.h"
 #include "roboint.h"
 
@@ -999,16 +1000,21 @@ static void *FtThread(FT_HANDLE hFt)
 
 		sem_wait(&hFt->lock);
 		area->E_Main = in[0];
+		if (num_read == 6) { // FT_ROBO_IO_EXTENSION/FT_ROBO_LT_CONTROLLER
+			area->AX = in[1] | ((in[4] & 0x03)<<8);
+			area->AY = in[2] | ((in[4] & 0x0c)<<6);
+			AV       = in[3] | ((in[4] & 0x30)<<4);
+		}
 		area->E_Sub1 = in[1];
 		area->E_Sub2 = in[2];
 		area->E_Sub3 = in[3];
-		if (hFt->type != FT_INTELLIGENT_IF && hFt->type != FT_INTELLIGENT_IF_SLAVE) {
+		if (num_read != 6 && hFt->type != FT_INTELLIGENT_IF && hFt->type != FT_INTELLIGENT_IF_SLAVE) {
 			area->AX = in[4];
 			area->AY = in[5];
 		}
 		area->A1 = in[6];
 		area->A2 = in[7];
-		if (hFt->type != FT_INTELLIGENT_IF && hFt->type != FT_INTELLIGENT_IF_SLAVE) {
+		if (num_read != 6 && hFt->type != FT_INTELLIGENT_IF && hFt->type != FT_INTELLIGENT_IF_SLAVE) {
 			area->AX |= (in[8] & 0x3) << 8;
 			area->AY |= (in[8] & 0xC) << 6;
 		}
@@ -1017,11 +1023,15 @@ static void *FtThread(FT_HANDLE hFt)
 		area->AZ = in[9];
 		area->D1 = in[10];
 		area->D2 = in[11];
-		AV = in[12];
+		if (num_read != 6) { // FT_ROBO_IO_EXTENSION/FT_ROBO_LT_CONTROLLER
+			AV = in[12];
+		}
 		area->AZ |= (in[13] & 0x3) << 8;
 		area->D1 |= (in[13] & 0xC) << 6;
 		area->D2 |= (in[13] & 0x30) << 4;
-		AV |= (in[13] & 0xC0) << 2;
+		if (num_read != 6) { // FT_ROBO_IO_EXTENSION/FT_ROBO_LT_CONTROLLER
+			AV |= (in[13] & 0xC0) << 2;
+		}
 		area->IRKeys = in[14];
 		area->BusModules = in[15];
 		// 16
@@ -1053,10 +1063,14 @@ static void *FtThread(FT_HANDLE hFt)
 			}
 		}
 		// AV Values
-		area->AV = 8.63*AV-1775;
-		area->AVS1 = 8.63*AVS1-1775;
-		area->AVS2 = 8.63*AVS2-1775;
-		area->AVS3 = 8.63*AVS3-1775;
+		if (num_read == 6) { // FT_ROBO_IO_EXTENSION/FT_ROBO_LT_CONTROLLER
+			area->AV = 3.1267*AV-51.068;
+		} else {
+			area->AV = 8.63*AV-1775;
+			area->AVS1 = 8.63*AVS1-1775;
+			area->AVS2 = 8.63*AVS2-1775;
+			area->AVS3 = 8.63*AVS3-1775;
+		}
 		sem_post(&hFt->lock);
 
 		hFt->interface_connected = 1;
@@ -1297,7 +1311,7 @@ long int DownloadFtProgram(FT_HANDLE hFt, long int dwMemBlock, unsigned char *pb
 	// check
 	ret = usb_control_msg(hFt->device, 0xC0, 0x20, 0x0, 0x0, buffer, 1, FT_USB_TIMEOUT_LONG);
 	if (ret < 0) {
-		fprintf(stderr, "Error sending control ms 0xC0 0x20g\n");
+		fprintf(stderr, "Error sending control ms 0xC0 0x20\n");
 		return ret;
 	}
 	if (buffer[0] != dwMemBlock || (buffer[0] == 0 && memblockarg == 0xf200) || (buffer[0] == 1 && memblockarg == 0xf201)) {
