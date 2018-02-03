@@ -15,4 +15,3 @@ if ri.hasInterface():
 	ri.SetMotor(1, 's') # stop
 
 ri.close()
-

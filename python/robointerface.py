@@ -242,19 +242,26 @@ class RoboInterface:
 			print >> sys.stderr, "Error: Can't find Library libroboint"
 		else:
 			self.lib = cdll.LoadLibrary(sLibName)
+			self.lib.OpenFtCommDevice.restype = c_void_p
+			self.lib.GetFtTransferAreaAddress.restype = c_void_p
+			self.lib.GetFtUsbDeviceHandleSerialNr.restype = c_void_p
+			self.lib.GetFtUsbDeviceHandle.restype = c_void_p
 
 			# rs232
 			if serialDevice:
 				self.fthandle_p = self.lib.OpenFtCommDevice(serialDevice, SerialType, 10)
+				self.fthandle_p = ctypes.c_void_p(self.fthandle_p)
 			# usb
 			else:
 				self.lib.InitFtUsbDeviceList()
 				# by serial
 				if iUSBSerial:
 					self.fthandle_p = self.lib.GetFtUsbDeviceHandleSerialNr(iUSBSerial, self.FT_AUTO_TYPE)
+					self.fthandle_p = ctypes.c_void_p(self.fthandle_p)
 				# by id
 				else:
 					self.fthandle_p = self.lib.GetFtUsbDeviceHandle(iDevice)
+					self.fthandle_p = ctypes.c_void_p(self.fthandle_p)
 				self.lib.OpenFtUsbDevice(self.fthandle_p)
 
 			# distance sensors
@@ -263,7 +270,6 @@ class RoboInterface:
 			else:
 				self.lib.SetFtDistanceSensorMode(self.fthandle_p, 0, self.kTolerance[0], self.kTolerance[1], self.kLevel[0], self.kLevel[1], self.kRepeat[0], self.kRepeat[1])
 
-			self.transfer_area = None
 			if bStartTransferArea:
 				self.lib.StartFtTransferArea(self.fthandle_p, None)
 				transfer_area_p = self.lib.GetFtTransferAreaAddress(self.fthandle_p)
@@ -662,4 +668,3 @@ class RoboInterface:
 		Will return 0 if the interface is not responding
 		"""
 		return self.lib.IsFtInterfaceConnected(self.fthandle_p)
-
