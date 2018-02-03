@@ -1,7 +1,7 @@
 Source: libroboint
 Priority: extra
 Maintainer: Erik Andresen <erik@defiant.homedns.org>
-Build-Depends: debhelper (>= 5), cmake, libusb-dev, python (>= 2.0), python-central, doxygen
+Build-Depends: debhelper (>= 5), cmake, libusb-dev, python (>= 2.0), dh-python, doxygen
 Standards-Version: 3.7.2
 Section: libs
 
@@ -36,9 +36,8 @@ Description: library for the fischertechnik ROBO Interface
 Package: libroboint-python
 Section: libdevel
 Architecture: all
-Depends: libroboint0 (= ${binary:Version}), python-ctypes
-XS-Python-Version: >= 2.0
-XB-Python-Version: ${python:Versions}
+Depends: libroboint0 (= ${binary:Version}), python-ctypes, ${python:Depends}
+X-Python-Version: >= 2.0
 Description: library for the fischertechnik ROBO Interface - Python module
  libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
@@ -64,9 +63,8 @@ Description: library for the fischertechnik ROBO Interface - Documentation
 Package: libroboint-diag
 Section: libdevel
 Architecture: all
-Depends: libroboint0 (= ${binary:Version}), libroboint-python (= ${binary:Version}), python-qt4
-XS-Python-Version: >= 2.0
-XB-Python-Version: ${python:Versions}
+Depends: libroboint0 (= ${binary:Version}), libroboint-python (= ${binary:Version}), python-qt4, ${python:Depends}
+X-Python-Version: >= 2.0
 Description: library for the fischertechnik ROBO Interface - Python module
  libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
@@ -80,8 +78,6 @@ Package: libroboint-all
 Section: libdevel
 Architecture: any
 Depends: libroboint0 (= ${binary:Version}), libroboint-python (= ${binary:Version}), libroboint-diag (= ${binary:Version}), libroboint-dev (=${binary:Version}), python-qt4
-XS-Python-Version: >= 2.0
-XB-Python-Version: ${python:Versions}
 Description: library for the fischertechnik ROBO Interface - Python module
  libroboint is an implementation of the fischertechnik ROBO interface library for
  Unix-like systems. The goal is to create a library that is fully compatible
