@@ -1,9 +1,0 @@
--README
--lib/libft.c: Header, define
--CMakeLists.txt
--src/ftuploader.c (If changed)
--python/setup.py (If changed)
--diag/setup.py (If changed)
--debian: dch
-
-make clean && rm CMakeCache.txt
